@@ -1,10 +1,14 @@
+import './Navbar.css'
+
 const Navbar = () => {
     return (
-        <div className="navbar">
+        <nav className="navbar-container">
             <h3>Math Hero</h3>
-            <h3>Home</h3>
-            <h3>About</h3>
-        </div>
+            <section className="navbar-links">
+                <h3>Home</h3>
+                <h3>About</h3>
+            </section>
+        </nav>
     );
 }
  

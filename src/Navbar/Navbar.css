@@ -1,0 +1,13 @@
+.navbar-container {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+.navbar-links {
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}

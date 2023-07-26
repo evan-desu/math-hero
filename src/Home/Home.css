@@ -1,0 +1,25 @@
+.home-container {
+    border: 3px solid pink;
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-intro-container {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-grade-selection {
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
