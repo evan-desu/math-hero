@@ -1,6 +1,15 @@
 import './Home.css'
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    function handleGradeOneClick() {
+        navigate('/grade1')
+    }
+
+    // try to set upn one function to handle all grades
+
     return (
         <main className="home-container">
             <section className="home-intro-container">
@@ -13,7 +22,7 @@ const Home = () => {
             <section className="home-grade-selection">
                 <h2>Select your elementary school grade:</h2>
                 <div className="home-button-container">
-                    <button className="grade-btn">Grade 1</button>
+                    <button className="grade-btn" onClick={handleGradeOneClick}>Grade 1</button>
                     <button className="grade-btn">Grade 2</button>
                     <button className="grade-btn">Grade 3</button>
                     <button className="grade-btn">Grade 4</button>
