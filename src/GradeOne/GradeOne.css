@@ -1,0 +1,11 @@
+.quiz-select-selection {
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}

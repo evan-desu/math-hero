@@ -9,6 +9,8 @@ import GradeThree from './GradeThree/GradeThree';
 import GradeFour from './GradeFour/GradeFour';
 import GradeFive from './GradeFive/GradeFive';
 import GradeSix from './GradeSix/GradeSix';
+import AdditionTen from './Quizzes/AdditionTen';
+
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
           <Route path='/grade4' element={ <GradeFour /> } />
           <Route path='/grade5' element={ <GradeFive /> } />
           <Route path='/grade6' element={ <GradeSix /> } />
+          <Route path='/add-to-10' element={ <AdditionTen /> }/>
         </Routes>
         <Footer />
       </div>
