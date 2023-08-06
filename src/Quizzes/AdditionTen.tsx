@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { add, checkAnswer } from '../MathFunctions'
 
 const AdditionTen = () => {
-    const [problem, setProblem] = useState({num1: 0, num2: 0, sum: 0});
+    const [problem, setProblem] = useState({ num1: 0, num2: 0, sum: 0 });
     const [userAnswer, setUserAnswer] = useState('');
     const [questionNumber, setQuestionNumber] = useState(1);
     const [score, setScore] = useState(0);
@@ -29,6 +29,7 @@ const AdditionTen = () => {
             setIsFinished(true);
         }
 
+        setUserAnswer('');
     }
 
     return (
