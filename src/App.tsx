@@ -10,6 +10,8 @@ import GradeFour from './GradeFour/GradeFour';
 import GradeFive from './GradeFive/GradeFive';
 import GradeSix from './GradeSix/GradeSix';
 import AdditionTen from './Quizzes/AdditionTen';
+import AdditionTwenty from './Quizzes/AdditionTwenty';
+import SubtractionTen from './Quizzes/SubtractionTen';
 
 
 
@@ -28,6 +30,8 @@ function App() {
           <Route path='/grade5' element={ <GradeFive /> } />
           <Route path='/grade6' element={ <GradeSix /> } />
           <Route path='/add-to-10' element={ <AdditionTen /> }/>
+          <Route path='/add-to-20' element={ <AdditionTwenty /> }/>
+          <Route path='/subtract-under-10' element={ <SubtractionTen /> }/>
         </Routes>
         <Footer />
       </div>

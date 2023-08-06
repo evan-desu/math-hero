@@ -38,6 +38,18 @@ export function add(sumLimit: number) {
     return {num1, num2, sum: num1 + num2}
 }
 
+export function subtract(numLimit: number) {
+    let num1 = generateNumber(numLimit);
+    let num2 = generateNumber(numLimit);
+
+    while (num1 < num2) {
+        num1 = generateNumber(numLimit);
+        num2 = generateNumber(numLimit);
+    }
+
+    return {num1, num2, difference: num1 - num2}
+}
+
 export function checkAnswer(correctAnswer: number, userAnswer: number) {
     return userAnswer === correctAnswer;
 }
