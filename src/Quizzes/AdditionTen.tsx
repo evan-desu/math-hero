@@ -42,11 +42,11 @@ const AdditionTen = () => {
                     <p>{problem.num1} + {problem.num2}</p>
                     <form onSubmit={handleSubmit}>
                         <input
-                        type="number"
-                        value={userAnswer}
-                        onChange={(e) => setUserAnswer(e.target.value)}
-                    />
-                        <button type="submit">Submit</button>
+                            type='number'
+                            value={userAnswer}
+                            onChange={(e) => setUserAnswer(e.target.value)}
+                        />
+                        <button type='submit'>Submit</button>
                     </form>
                 </section>
             ) : (
