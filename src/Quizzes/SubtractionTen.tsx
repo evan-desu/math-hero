@@ -44,8 +44,8 @@ const SubtractionTen = () => {
                             value={userAnswer}
                             onChange={(e) => setUserAnswer(e.target.value)}
                         />
+                        <button type='submit'>Submit</button>
                     </form>
-                    <button type='submit'>Submit</button>
                 </section>
             ) : (
                 <p>Your score: {score}/10</p>
