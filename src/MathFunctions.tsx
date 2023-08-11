@@ -1,5 +1,3 @@
-import { generateKeySync } from "crypto";
-
 export function generateNumber(limit: number = 10) {
     return Math.floor(Math.random() * limit + 1)
 }
@@ -26,6 +24,11 @@ export function generateEmoji() {
     return [emojiName[index], emojiArray[index]]
 }
 
+
+// export function count(items, limit) {
+
+// }
+
 export function add(sumLimit: number) {
     let num1 = generateNumber(sumLimit);
     let num2 = generateNumber(sumLimit);
@@ -45,6 +48,13 @@ export function subtract(numLimit: number) {
     while (num1 < num2) {
         num1 = generateNumber(numLimit);
         num2 = generateNumber(numLimit);
+    }
+    
+    if (numLimit > 10) {
+        while (num1 < 11 || num1 < num2) {
+            num1 = generateNumber(numLimit)
+            num2 = generateNumber(numLimit)
+        }
     }
 
     return {num1, num2, difference: num1 - num2}
