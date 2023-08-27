@@ -13,8 +13,8 @@ import AdditionTen from './Quizzes/AdditionTen';
 import AdditionTwenty from './Quizzes/AdditionTwenty';
 import SubtractionTen from './Quizzes/SubtractionTen';
 import SubtractionTwenty from './Quizzes/SubtractionTwenty';
-import CountingTen from './Quizzes/CountingTen';
-import CountingTwenty from './Quizzes/CountingTwenty';
+import CountingSingle from './Quizzes/CountingSingle';
+import CountingMixed from './Quizzes/CountingMixed';
 
 function App() {
 
@@ -34,8 +34,8 @@ function App() {
           <Route path='/add-to-20' element={ <AdditionTwenty /> }/>
           <Route path='/subtract-under-10' element={ <SubtractionTen /> }/>
           <Route path='/subtract-under-20' element={ <SubtractionTwenty /> }/>
-          <Route path='/count-to-10' element={ <CountingTen /> }/>
-          <Route path='/count-to-20' element={ <CountingTwenty /> }/>
+          <Route path='/count-single' element={ <CountingSingle /> }/>
+          <Route path='/count-mixed' element={ <CountingMixed /> }/>
         </Routes>
         <Footer />
       </div>
