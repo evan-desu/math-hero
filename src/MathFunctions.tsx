@@ -29,7 +29,7 @@ export function generateEmoji(limit: number = 10) {
 };
 
 export function mixedCount(items: number, singleLimit: number, totalLimit: number):
-    { emojis: string[], total: number } {
+    { emojis: string[], counts: { [key: string]: number} } {
     const emojis = {
         circles: '🟢', 
         hearts: '💙', 
@@ -44,6 +44,10 @@ export function mixedCount(items: number, singleLimit: number, totalLimit: numbe
         flowers: '🌼',
         cookies: '🍪',
     };
+
+    // items = generateNumber(items);
+    // singleLimit = generateNumber(singleLimit) + 3;
+    // totalLimit = generateNumber(totalLimit);
 
     let emojiArray = Object.values(emojis);
     let selectedEmojis: string[] = [];
@@ -75,7 +79,13 @@ export function mixedCount(items: number, singleLimit: number, totalLimit: numbe
         const j = Math.floor(Math.random() * (i + 1));
         [result[i], result[j]] = [result[j], result[i]]
     }
-    return {emojis: result, total: result.length};
+
+    let counts: { [key: string]: number } = {};
+    for (let emoji of selectedEmojis) {
+        counts[emoji] = result.filter(e => e === emoji).length;
+    }
+
+    return { emojis: result, counts };
 }
 
 export function add(sumLimit: number) {

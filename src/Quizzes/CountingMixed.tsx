@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { mixedCount, checkAnswer } from "../MathFunctions";
 
 const CountingMixed = () => {
-    const [problem, setProblem] = useState<{ emojis: string[], total: number }>({ emojis: [], total: 0 });
+    const [problem, setProblem] = useState<{ emojis: string[], counts: { [key: string]: number } } | null>(null);
+    const [problems, setProblems] = useState<{ emojis: string[], counts: { [key: string]: number } }[]>([]);
+    const [currentQuestion, setCurrentQuestion] = useState('');
     const [questionNumber, setQuestionNumber] = useState(1);
     const [userAnswer, setUserAnswer] = useState('');
     const [score, setScore] = useState(0);
@@ -10,22 +12,26 @@ const CountingMixed = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        let newProblem = mixedCount(3, 10, 20);
-        setProblem(newProblem);
+        let newProblems = Array.from({length: 20}, () => mixedCount(4, 10, 20));
+        setProblems(newProblems);
+        let randomProblem = newProblems[Math.floor(Math.random() * newProblems.length)];
+        setProblem(randomProblem);
+        setCurrentQuestion(randomProblem.emojis[Math.floor(Math.random() * randomProblem.emojis.length)]);
         setIsLoading(false);
     }, []);
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
-        if(checkAnswer(parseInt(userAnswer), problem.total)) {
+        if(checkAnswer(parseInt(userAnswer), problem.counts[currentQuestion])) {
             setScore(score + 1)
         };
 
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            const newProblem = mixedCount(3, 10, 15);
-            setProblem(newProblem);
+            let randomProblem = problems[Math.floor(Math.random() * problems.length)];
+            setProblem(randomProblem);
+            setCurrentQuestion(randomProblem.emojis[Math.floor(Math.random() * randomProblem.emojis.length)])
         } else {
             setIsFinished(true);
         }
@@ -39,6 +45,7 @@ const CountingMixed = () => {
             {!isFinished ? (
                 <section className="question-container">
                     <p>Question {questionNumber}</p>
+                    <p>How many {currentQuestion} are there?</p>
                     <div>
                         {problem.emojis.map((emoji, index) => (
                             <span key={index}>{emoji}</span>
