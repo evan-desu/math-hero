@@ -2,7 +2,7 @@ export function generateNumber(limit: number = 10) {
     return Math.floor(Math.random() * limit + 1)
 }
 
-export function generateEmoji() {
+export function generateEmoji(limit: number = 10) {
     const emojis = {
         circles: '🟢', 
         hearts: '💙', 
@@ -19,12 +19,16 @@ export function generateEmoji() {
     };
 
     let emojiArray = Object.values(emojis);
-    let emojiName = Object.keys(emojis)
-    let index = generateNumber(emojiArray.length)
-    return [emojiName[index], emojiArray[index]]
-}
+    let emojiNameArray = Object.keys(emojis);
+    let index = generateNumber(emojiArray.length) - 1;
+    let count = generateNumber(limit);
+    let emoji = emojiArray[index];
+    let emojiName = emojiNameArray[index];
 
-export function count(items: number, singleLimit: number, totalLimit: number):
+    return { emoji, emojiName, count };
+};
+
+export function mixedCount(items: number, singleLimit: number, totalLimit: number):
     { emojis: string[], total: number } {
     const emojis = {
         circles: '🟢', 
