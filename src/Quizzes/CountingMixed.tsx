@@ -23,7 +23,7 @@ const CountingMixed = () => {
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
-        if(checkAnswer(parseInt(userAnswer), problem.counts[currentQuestion])) {
+        if(problem && checkAnswer(parseInt(userAnswer), problem.counts[currentQuestion])) {
             setScore(score + 1)
         };
 
@@ -47,7 +47,7 @@ const CountingMixed = () => {
                     <p>Question {questionNumber}</p>
                     <p>How many {currentQuestion} are there?</p>
                     <div>
-                        {problem.emojis.map((emoji, index) => (
+                        {problem && problem.emojis.map((emoji, index) => (
                             <span key={index}>{emoji}</span>
                         ))}
                     </div>
