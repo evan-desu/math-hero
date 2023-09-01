@@ -1,8 +1,10 @@
 .navbar-container {
-    border: 1px solid red;
+    background-color: #A7C7E7;
     display: flex;
     justify-content: space-between;
-    padding: 0 3rem;
+    padding: 0 7rem;
+    font-size: 1.8em;
+    box-shadow: 0px 1px 7px gray;
 }
 
 .navbar-links {
@@ -10,4 +12,8 @@
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+}
+
+.navbar-link:hover {
+    cursor: pointer;
 }

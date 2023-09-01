@@ -11,4 +11,5 @@ html, body {
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0px -1px 7px gray;
 }

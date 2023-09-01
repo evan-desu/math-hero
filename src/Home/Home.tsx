@@ -5,11 +5,9 @@ const Home = () => {
     const navigate = useNavigate();
 
     function handleGradeClick(grade: number) {
-        navigate(`/grade${grade}`)
-    }
-
-    // try to set upn one function to handle all grades
-
+        navigate(`/grade${grade}`);
+    };
+    
     return (
         <main className="home-container">
             <section className="home-intro-container">
