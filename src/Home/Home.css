@@ -1,12 +1,10 @@
 .home-container {
-    /* border: 3px solid pink; */
     display: flex;
     justify-content: space-evenly;
     padding-top: 4em;
 }
 
 .home-intro-container {
-    /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +24,6 @@
 }
 
 .home-grade-selection {
-    /* border: 1px solid orange; */
     display: flex;
     flex-direction: column;
 }
@@ -51,3 +48,43 @@ button:hover {
     transform: scale(1.1);
 }
 
+@media (max-width: 767px) {
+    .home-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-welcome {
+        line-height: .6;
+    }
+    
+    .home-title  {
+        font-size: 2.2em;
+        line-height: .6;
+    }
+    
+    .home-intro {
+        line-height: 1.2;
+    }
+
+    .home-button-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-grade-selection {
+        align-items: center;
+    }
+
+    .home-grade-selection h2 {
+        text-align: center;
+    }
+
+    button {
+        /* font-family: 'Andika', sans-serif; */
+        /* font-size: 1.7em; */
+        color: black;
+        /* border: none; */
+        /* border-radius: 15px; */
+        width: 8em;
+    }
+}

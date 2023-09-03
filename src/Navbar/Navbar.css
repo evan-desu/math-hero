@@ -8,7 +8,6 @@
 }
 
 .navbar-links {
-    border: 1px solid green;
     display: flex;
     justify-content: space-between;
     gap: 3rem;
@@ -16,4 +15,21 @@
 
 .navbar-link:hover {
     cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .navbar-container {
+        padding: -1rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 1rem;
+        font-size: 1.3em; /* Adjust as needed */
+    }
+
+    .navbar-links {
+        gap: 1.5rem; /* Adjust as needed */
+    }
 }
