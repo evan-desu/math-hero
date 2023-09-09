@@ -1,7 +1,9 @@
+import './GradeFive.css'
+
 const GradeFive = () => {
     return (
         <main>
-            <h2>You're in Grade Five!</h2>
+            <h2 className="coming-soon">Grade Five Quizzes Coming Soon</h2>
         </main>
     );
 }
