@@ -1,19 +1,29 @@
 .quiz-select-selection {
-    border: 1px solid orange;
+    /* border: 3px solid orange; */
     display: flex;
     flex-direction: column;
 }
 
+.selection-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
 .quiz-button-container {
+    /* border: 2px solid red; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.2rem;
+    gap: 1.8rem;
+    justify-items: center;
+    padding: 0 5rem;
 }
 
 button {
     font-family: 'Andika', sans-serif;
     font-size: 1.7em;
     color: black;
+    width: clamp(18rem, 25vw, 28rem);
     border: none;
     border-radius: 15px;
 }
@@ -21,4 +31,14 @@ button {
 button:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+@media (max-width: 960px) {
+    .quiz-button-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 1.4rem; */
+        /* padding: 0 3rem; */
+        justify-items: center;
+    }
 }
