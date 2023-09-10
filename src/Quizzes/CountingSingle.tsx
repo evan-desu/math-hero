@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { generateEmoji, checkAnswer } from "../MathFunctions";
+import { useEffect, useState } from 'react';
+import { generateEmoji, checkAnswer } from '../MathFunctions';
+import './CountingSingle.css'
 
 const CountingSingle = () => {
     const [problem, setProblem] = useState({ emoji: '', emojiName: '', count: 0 });
@@ -33,14 +34,14 @@ const CountingSingle = () => {
     };
 
     return (
-        <>
+        <main className="counting-single--quiz-container">
             <h2>Counting Single Items</h2>
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
                 <section className="question-container">
-                    <p>Question {questionNumber}</p>
-                    <p>How many {problem.emojiName} {problem.emoji} are there?</p>
-                    <div>
+                    <p className="question-number">Question {questionNumber}</p>
+                    <p className="question-text">How many {problem.emojiName} {problem.emoji} are there?</p>
+                    <div className="counting-items">
                         {Array.from({ length: problem.count }).map((_, i) => (
                             <span key={i}>{problem.emoji}</span>
                         ))}
@@ -48,6 +49,7 @@ const CountingSingle = () => {
                     <form onSubmit={handleSubmit}>
                         <input
                             type='number'
+                            placeholder='Answer'
                             value={userAnswer}
                             onChange={(e) => setUserAnswer(e.target.value)}
                         />
@@ -57,7 +59,7 @@ const CountingSingle = () => {
             ) : (
                 <p>Your score: {score}/10</p>
             )}
-        </>
+        </main>
     );
 }
  
