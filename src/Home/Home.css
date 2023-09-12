@@ -24,8 +24,10 @@
 }
 
 .home-grade-selection {
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .home-button-container {
@@ -33,21 +35,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.8rem;
-    justify-items: center;
-
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.8rem; */
 }
 
-.home-button-container button {
+.grade-btn {
     font-family: 'Andika', sans-serif;
     font-size: 1.7em;
     color: black;
-    height: clamp(1.5rem, 4vw, 6.5rem);
-    width: clamp(18rem, 22vw, 22rem);
     border: none;
     border-radius: 15px;
+    width: 10em;
+    height: 2em;
 }
 
 button:hover {
@@ -79,19 +76,17 @@ button:hover {
     }
 
     .home-grade-selection {
+        /* border: 2px dotted blue; */
         align-items: center;
+        margin-bottom: 100px;
     }
 
     .home-grade-selection h2 {
         text-align: center;
     }
 
-    button {
-        /* font-family: 'Andika', sans-serif; */
-        /* font-size: 1.7em; */
+    .grade-btn {
         color: black;
-        /* border: none; */
-        /* border-radius: 15px; */
         width: 8em;
     }
 }
