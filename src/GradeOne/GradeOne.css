@@ -51,11 +51,11 @@ button:hover {
         color: black;
         border: none;
         border-radius: 15px;
-        width: 12em;
-        height: 2.5em;
+        width: 10em;
+        height: 4.5em;
     }
 
-    .desktop-break {
+    /* .desktop-break {
         display: none;
-    }
+    } */
 }

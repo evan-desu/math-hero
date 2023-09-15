@@ -35,7 +35,7 @@ const CountingSingle = () => {
 
     return (
         <main className="counting-single--quiz-container">
-            <h2>Counting Single Items</h2>
+            {/* <h2>Counting Single Items</h2> */}
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
                 <section className="question-container">
