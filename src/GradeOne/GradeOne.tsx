@@ -20,11 +20,11 @@ const GradeOne = () => {
                     <button className="quiz-btn" onClick={() => handleQuizClick("count-mixed")}>
                         Counting <br className="desktop-break" />(Mixed Items)
                     </button>
-                    <button className="quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
-                        Addition <br className="desktop-break" />(To 20)
-                    </button>
                     <button className="quiz-btn" onClick={() => handleQuizClick("add-to-10")}>
                         Addition <br className="desktop-break" />(To 10)
+                    </button>
+                    <button className="quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
+                        Addition <br className="desktop-break" />(To 20)
                     </button>
                     <button className="quiz-btn" onClick={() => handleQuizClick("subtract-under-10")}>
                         Subtraction <br className="desktop-break" />(Under 10)

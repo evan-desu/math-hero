@@ -2,8 +2,8 @@
     background-color: #0F52BA;
     display: flex;
     justify-content: space-between;
-    padding: 0 7rem;
-    font-size: 1.8em;
+    padding: 0 9rem;
+    font-size: 1.8rem;
     box-shadow: 0px 1px 7px gray;
     color: white;
 }
@@ -27,10 +27,10 @@
 @media (max-width: 768px) {
     .navbar-container {
         padding: 1rem;
-        font-size: 1.3em; /* Adjust as needed */
+        font-size: 1.3rem;
     }
 
     .navbar-links {
-        gap: 1.5rem; /* Adjust as needed */
+        gap: 1.5rem;
     }
 }

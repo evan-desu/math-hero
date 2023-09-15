@@ -57,7 +57,10 @@ const CountingSingle = () => {
                     </form>
                 </section>
             ) : (
-                <p>Your score: {score}/10</p>
+                <section>
+                    <p className="score-text">Your score: </p>
+                    <p className="score-result">{score}/10</p>
+                </section>
             )}
         </main>
     );
