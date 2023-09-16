@@ -44,10 +44,10 @@ const CountingMixed = () => {
             {/* <h2>Counting Mixed Items</h2> */}
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
-                <section className="question-container">
-                    <p className="question-number">Question {questionNumber}</p>
-                    <p className="question-text">How many {currentQuestion?.symbol} {currentQuestion?.name} are there?</p>
-                    <div className="counting-items">
+                <section className="question-container-mixed">
+                    <p className="question-number-mixed">Question {questionNumber}</p>
+                    <p className="question-text-mixed">How many {currentQuestion?.symbol} {currentQuestion?.name} are there?</p>
+                    <div className="counting-items-mixed">
                         {problem && problem.emojis.map((emoji, index) => (
                             <span key={index}>{emoji.symbol}</span>
                         ))}
