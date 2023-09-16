@@ -9,7 +9,6 @@ export function generateEmoji(limit: number = 10) {
         unicorns: '🦄', 
         baseballs: '⚾', 
         rockets: '🚀',
-        stars: '⭐',
         cars: '🚗',
         rabbits: '🐰',
         ghosts: '👻',
@@ -29,14 +28,13 @@ export function generateEmoji(limit: number = 10) {
 };
 
 export function mixedCount(items: number, singleLimit: number, totalLimit: number):
-    { emojis: string[], counts: { [key: string]: number} } {
+    { emojis: { symbol: string; name: string; }[], counts: { [key: string]: number } } {
     const emojis = {
         circles: '🟢', 
         hearts: '💙', 
         unicorns: '🦄', 
         baseballs: '⚾', 
         rockets: '🚀',
-        stars: '⭐',
         cars: '🚗',
         rabbits: '🐰',
         ghosts: '👻',
@@ -45,8 +43,8 @@ export function mixedCount(items: number, singleLimit: number, totalLimit: numbe
         cookies: '🍪',
     };
 
-    let emojiArray = Object.values(emojis);
-    let selectedEmojis: string[] = [];
+    let emojiArray = Object.entries(emojis).map(([name, symbol]) => ({ name, symbol }));
+    let selectedEmojis: { symbol: string; name: string }[] = [];
 
     for (let i = 0; i < items; i++) {
         let index = Math.floor(Math.random() * emojiArray.length);
@@ -54,20 +52,20 @@ export function mixedCount(items: number, singleLimit: number, totalLimit: numbe
         emojiArray.splice(index, 1);
     }
 
-    let result: string[] = [];
+    let result: { symbol: string; name: string }[] = [];
     for (let i = 0; i < totalLimit; i++) {
-        let emoji = selectedEmojis[Math.floor(Math.random() * selectedEmojis.length)];
-        let countOfEmoji = result.filter(e => e === emoji).length;
+        let emojiObj = selectedEmojis[Math.floor(Math.random() * selectedEmojis.length)];
+        let countOfEmoji = result.filter(e => e.symbol === emojiObj.symbol).length;
         if (countOfEmoji < singleLimit) {
-            result.push(emoji);
+            result.push(emojiObj);
         } else {
             i--;
         }
     }
 
     let counts: { [key: string]: number } = {};
-    for (let emoji of selectedEmojis) {
-        counts[emoji] = result.filter(e => e === emoji).length;
+    for (let emojiObj of selectedEmojis) {
+        counts[emojiObj.name] = result.filter(e => e.symbol === emojiObj.symbol).length;
     }
 
     return { emojis: result, counts };

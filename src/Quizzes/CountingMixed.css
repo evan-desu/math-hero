@@ -1,0 +1,119 @@
+.counting-mixed--quiz-container {
+    /* border: 4px solid yellow; */
+    margin: 60px 450px 100px 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    background-color: whitesmoke;
+    border-radius: 25px;
+}
+
+.question-container-mixed {
+    /* border: 2px solid purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question-number-mixed {
+    /* border: 2px solid red; */
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-bottom: 0.3rem;
+}
+
+.question-text-mixed {
+    font-size: 2rem;
+    margin-top: 0.3rem;
+    /* margin-bottom: 0; */
+}
+
+.counting-items-mixed {
+    /* border: 2px solid purple; */
+    font-size: 3rem;
+    grid: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    max-width: 350px;
+    min-height: 160px;
+    max-height: 320px;
+}
+
+.counting-items-mixed span {
+    margin: 0 5px;
+}
+
+.question-container-mixed form {
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 1.5rem;
+}
+
+.counting-mixed--quiz-container input {
+    width: 18rem;
+    height: 3.5rem;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(15, 82, 186, 0.5);
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.counting-mixed--quiz-container button {
+    font-family: 'Andika', sans-serif;
+    font-size: 1.7rem;
+    color: white;
+    background-color: #0F52BA;
+    width: 20rem;
+    height: 4rem;
+    border: none;
+    border-radius: 15px;
+}
+
+@media (max-width: 767px) {
+    .counting-mixed--quiz-container {
+        margin: 50px 30px;
+    }
+
+    .question-number-mixed {
+        font-size: 1.5rem;
+    }
+
+    .question-text-mixed {
+        font-size: 1.2rem;
+    }
+
+    .counting-items-mixed {
+        font-size: 2rem;
+        max-width: 70%;
+        min-height: 120px;
+    }
+
+    .counting-items-mixed span {
+        margin: 0 5px;
+    }
+
+    .counting-mixed--quiz-container input {
+        width: 16rem;
+        height: 2.5rem;
+    }
+
+    .counting-mixed--quiz-container button {
+        width: 16rem;
+        height: 3rem;
+    }
+
+    .score-container {
+        /* border: 2px solid red; */
+        margin: 60px 100px 100px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 120px 10px 120px;
+    }
+}

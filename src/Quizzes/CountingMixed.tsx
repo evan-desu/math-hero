@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { mixedCount, checkAnswer } from "../MathFunctions";
+import './CountingMixed.css'
 
 const CountingMixed = () => {
-    const [problem, setProblem] = useState<{ emojis: string[], counts: { [key: string]: number } } | null>(null);
-    const [problems, setProblems] = useState<{ emojis: string[], counts: { [key: string]: number } }[]>([]);
-    const [currentQuestion, setCurrentQuestion] = useState('');
+    const [problem, setProblem] = useState<{ emojis: { symbol: string; name: string; }[], counts: { [key: string]: number } } | null>(null);
+    const [problems, setProblems] = useState<{ emojis: {symbol: string; name: string; }[], counts: { [key: string]: number } }[]>([]);
+    const [currentQuestion, setCurrentQuestion] = useState <{ symbol: string; name: string } | null>(null);
     const [questionNumber, setQuestionNumber] = useState(1);
     const [userAnswer, setUserAnswer] = useState('');
     const [score, setScore] = useState(0);
@@ -12,7 +13,7 @@ const CountingMixed = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        let newProblems = Array.from({length: 20}, () => mixedCount(4, 10, 20));
+        let newProblems = Array.from({length: 20}, () => mixedCount(4, 10, 15));
         setProblems(newProblems);
         let randomProblem = newProblems[Math.floor(Math.random() * newProblems.length)];
         setProblem(randomProblem);
@@ -23,7 +24,7 @@ const CountingMixed = () => {
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
-        if(problem && checkAnswer(parseInt(userAnswer), problem.counts[currentQuestion])) {
+        if(problem && currentQuestion && checkAnswer(parseInt(userAnswer), problem.counts[currentQuestion.name])) {
             setScore(score + 1)
         };
 
@@ -39,16 +40,16 @@ const CountingMixed = () => {
     };
 
     return (
-        <>
-            <h2>Counting Mixed Items</h2>
+        <main className="counting-mixed--quiz-container">
+            {/* <h2>Counting Mixed Items</h2> */}
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
                 <section className="question-container">
-                    <p>Question {questionNumber}</p>
-                    <p>How many {currentQuestion} are there?</p>
-                    <div>
+                    <p className="question-number">Question {questionNumber}</p>
+                    <p className="question-text">How many {currentQuestion?.symbol} {currentQuestion?.name} are there?</p>
+                    <div className="counting-items">
                         {problem && problem.emojis.map((emoji, index) => (
-                            <span key={index}>{emoji}</span>
+                            <span key={index}>{emoji.symbol}</span>
                         ))}
                     </div>
                     <form onSubmit={handleSubmit}>
@@ -61,10 +62,13 @@ const CountingMixed = () => {
                     </form>
                 </section>
             ) : (
-                <p>Your score: {score}/10</p>
+                <section className="score-container">
+                    <p className="score-text">Your score: </p>
+                    <p className="score-result">{score}/10</p>
+                </section>
             )}
             
-        </>
+        </main>
     );
 }
  

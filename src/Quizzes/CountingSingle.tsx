@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { generateEmoji, checkAnswer } from '../MathFunctions';
 import './CountingSingle.css'
 
@@ -57,7 +57,7 @@ const CountingSingle = () => {
                     </form>
                 </section>
             ) : (
-                <section>
+                <section className="score-container">
                     <p className="score-text">Your score: </p>
                     <p className="score-result">{score}/10</p>
                 </section>
