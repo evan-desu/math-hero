@@ -24,6 +24,7 @@ function App() {
     <Router>
       <div className="app">
         <Navbar />
+        <div className="main-content">
         <Routes>
           <Route path='/' element={ <Home /> } />
           <Route path='/grade1' element={ <GradeOne /> } />
@@ -39,6 +40,7 @@ function App() {
           <Route path='/count-single' element={ <CountingSingle /> }/>
           <Route path='/count-mixed' element={ <CountingMixed /> }/>
         </Routes>
+        </div>
         <Footer />
       </div>
     </Router>

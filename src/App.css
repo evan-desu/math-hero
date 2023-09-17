@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika:wght@400;700&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Andika', sans-serif;
 }
@@ -15,6 +19,9 @@ body {
 	animation: gradient 15s ease infinite;
 }
 
+.main-content {
+	padding-top: 90px;
+}
 
 @keyframes gradient {
 	0% {
@@ -25,5 +32,11 @@ body {
 	}
 	100% {
 		background-position: 0% 50%;
+	}
+}
+
+@media (max-width: 767px) {
+	.main-content {
+		padding-top: 50px;
 	}
 }

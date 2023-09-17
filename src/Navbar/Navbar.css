@@ -1,36 +1,91 @@
-.navbar-container {
+/* .navbar-container {
     background-color: #0F52BA;
     display: flex;
     justify-content: space-between;
-    padding: 0 9rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    padding: 0 10px;
     box-shadow: 0px 1px 7px gray;
     color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border: 3px solid red;
+}
+
+.navbar-links {
+    border: 3px solid pink;
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+    padding-right: 10rem;
+}
+
+.navbar-math-hero {
+    padding-left: 8rem;;
+  } */
+
+  .navbar-container {
+    background-color: #0F52BA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 1px 7px gray;
+    color: white;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    height: 70px;
+}
+
+.navbar-math-hero, .navbar-link {
+    margin: 0;
+    padding: 20px 10px;
+    cursor: pointer;
 }
 
 .navbar-links {
     display: flex;
-    justify-content: space-between;
-    gap: 3rem;
+    gap: 4rem;
+    padding-right: 0;
 }
 
-.navbar-link:hover {
+.navbar-math-hero, .navbar-link:hover {
     cursor: pointer;
 }
 
+/* Default styles for larger screens (if any) can go outside the media query */
+
 @media (max-width: 767px) {
     .navbar-container {
-        padding: -1rem 0;
+        background-color: #0F52BA;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        width: 100%;
+        z-index: 1000;
+        font-size: 1rem;
+        white-space: nowrap;
     }
-}
 
-@media (max-width: 768px) {
-    .navbar-container {
-        padding: 1rem;
-        font-size: 1.3rem;
+    .navbar-math-hero, .navbar-link {
+        margin: 0;
+        padding: 20px 10px;
+        cursor: pointer;
     }
 
     .navbar-links {
-        gap: 1.5rem;
+        display: flex;
+        gap: 1rem;
+        padding-right: 0;
     }
+}
+
+
+body {
+    overflow-x: hidden;
 }
