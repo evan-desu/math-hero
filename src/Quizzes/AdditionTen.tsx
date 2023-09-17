@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { add, checkAnswer } from '../MathFunctions'
+import './AdditionTen.css'
 
 const AdditionTen = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 0, sum: 0 });
@@ -33,16 +34,16 @@ const AdditionTen = () => {
     }
 
     return (
-        <>
-            <h2>Addition up to ten</h2>
+        <main className="math-question-container">
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
                 <section className="question-container">
-                    <p>Question {questionNumber}</p>
-                    <p>{problem.num1} + {problem.num2}</p>
+                    <p className="question-number">Question {questionNumber}</p>
+                    <p className="problem-text">{problem.num1} + {problem.num2}</p>
                     <form onSubmit={handleSubmit}>
                         <input
                             type='number'
+                            placeholder='Answer'
                             value={userAnswer}
                             onChange={(e) => setUserAnswer(e.target.value)}
                         />
@@ -50,9 +51,12 @@ const AdditionTen = () => {
                     </form>
                 </section>
             ) : (
-                <p>Your score: {score}/10</p>
+                <section className="math-score-container">
+                    <p className="score-text">Your score: </p>
+                    <p className="score-result">{score}/10</p>
+                </section>
             )}
-        </>
+        </main>
     );
 }
  
