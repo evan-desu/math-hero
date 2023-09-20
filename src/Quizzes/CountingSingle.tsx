@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { generateEmoji, checkAnswer } from '../MathFunctions';
 import './CountingSingle.css'
 
@@ -10,11 +10,11 @@ const CountingSingle = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isFinished, setIsFinished] = useState(false);
 
-    useState(() => {
+    useEffect(() => {
         let newProblem = generateEmoji();
         setProblem(newProblem);
         setIsLoading(false);
-    })
+    }, [])
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
