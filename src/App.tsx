@@ -4,7 +4,6 @@ import './App.css'
 
 import Home from './Home/Home';
 import Navbar from './Navbar/Navbar';
-import Footer from './Footer/Footer';
 import GradeOne from './GradeOne/GradeOne';
 import GradeTwo from './GradeTwo/GradeTwo';
 import GradeThree from './GradeThree/GradeThree';
@@ -41,7 +40,6 @@ function App() {
           <Route path='/count-mixed' element={ <CountingMixed /> }/>
         </Routes>
         </div>
-        <Footer />
       </div>
     </Router>
   );

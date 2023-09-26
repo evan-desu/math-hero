@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { add, checkAnswer } from '../MathFunctions'
+import './AdditionTwenty.css'
 
 const AdditionTwenty = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 0, sum: 0 });
@@ -32,26 +33,29 @@ const AdditionTwenty = () => {
     }
 
     return (
-        <>
-            <h2>Addition up to twenty</h2>
+        <main className="add-twenty-container">
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
-                <section className="question-container">
-                    <p>Question {questionNumber}</p>
-                    <p>{problem.num1} + {problem.num2}</p>
+                <section className="add-twenty-question-container">
+                    <p　className="add-twenty-question-number">Question {questionNumber}</p>
+                    <p className="add-twenty-problem-text">{problem.num1} + {problem.num2}</p>
                     <form onSubmit={handleSubmit}>
                         <input
-                            type="number"
+                            type='number'
+                            placeholder='Answer'
                             value={userAnswer}
                             onChange={(e) => setUserAnswer(e.target.value)}
                         />
-                        <button type="submit">Submit</button>
+                        <button type='submit'>Submit</button>
                     </form>
                 </section>
             ) : (
-                <p>Your score: {score}/10</p>
+                <section className="add-twenty-score-container">
+                    <p className="add-twenty-score-text">Your score: </p>
+                    <p className="add-twenty-score-result">{score}/10</p>
+                </section>
             )}
-        </>
+        </main>
 
     );
 }
