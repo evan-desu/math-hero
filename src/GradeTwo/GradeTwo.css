@@ -44,6 +44,7 @@ button:hover {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
+        gap: 1.5rem;
     }
 
     .grade-two-quiz-btn {
