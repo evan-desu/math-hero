@@ -13,10 +13,10 @@ const GradeTwo = () => {
                 <h2>Welcome to Grade Two!</h2>
                 <h2>Select a quiz:</h2>
                 <div className='grade-two-quiz-button-container'>
-                    <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("add-to-10")}>
+                    <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
                         Addition <br className="desktop-break" />(To 20)
                     </button>
-                    <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("subtract-under-10")}>
+                    <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("subtract-under-20")}>
                         Subtraction <br className="desktop-break" />(Under 20)
                     </button>
                 </div>
