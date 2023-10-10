@@ -34,12 +34,12 @@ const AdditionTen = () => {
     }
 
     return (
-        <main className="math-question-container">
+        <main className="add-ten-container">
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
-                <section className="question-container">
-                    <p className="question-number">Question {questionNumber}</p>
-                    <p className="problem-text">{problem.num1} + {problem.num2}</p>
+                <section className="add-ten-question-container">
+                    <p className="add-ten-question-number">Question {questionNumber}</p>
+                    <p className="add-ten-problem-text">{problem.num1} + {problem.num2}</p>
                     <form onSubmit={handleSubmit}>
                         <input
                             type='number'
@@ -51,9 +51,9 @@ const AdditionTen = () => {
                     </form>
                 </section>
             ) : (
-                <section className="math-score-container">
-                    <p className="score-text">Your score: </p>
-                    <p className="score-result">{score}/10</p>
+                <section className="add-ten-score-container">
+                    <p className="add-ten-score-text">Your score: </p>
+                    <p className="add-ten-score-result">{score}/10</p>
                 </section>
             )}
         </main>

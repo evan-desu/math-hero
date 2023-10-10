@@ -30,7 +30,7 @@ const SubtractionTwenty = () => {
     }
 
     return (
-        <>
+        <main>
             <h2>Subtraction from twenty</h2>
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
@@ -49,7 +49,7 @@ const SubtractionTwenty = () => {
             ) : (
                 <p>Your score: {score}/10</p>
             )}
-        </>
+        </main>
     );
 }
  

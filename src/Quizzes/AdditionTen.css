@@ -1,4 +1,4 @@
-.math-question-container {
+.add-ten-container {
     /* border: 4px solid yellow; */
     margin: 60px 450px 100px 450px;
     display: flex;
@@ -9,27 +9,27 @@
     border-radius: 25px;
 }
 
-.question-container {
+.add-ten-question-container {
     /* border: 2px solid purple; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.question-number {
+.add-ten-question-number {
     /* border: 2px solid red; */
     font-size: 3rem;
     margin-top: 10px;
     padding-top: 10px;
 }
 
-.problem-text {
+.add-ten-problem-text {
     font-size: 2rem;
     margin-top: 0.3rem;
     /* margin-bottom: 0; */
 }
 
-.question-container form {
+.add-ten-question-container form {
     /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@
     gap: 1.5rem;
 }
 
-.math-question-container input {
+.add-ten-question-container input {
     width: 18rem;
     height: 3.5rem;
     border-radius: 15px;
@@ -48,7 +48,7 @@
     padding-left: 20px;
 }
 
-.math-question-container button {
+.add-ten-question-container button {
     font-family: 'Andika', sans-serif;
     font-size: 1.7rem;
     color: white;
@@ -59,7 +59,7 @@
     border-radius: 15px;
 }
 
-.math-score-container {
+.add-ten-score-container {
     margin: 90px 100px 100px 100px;
     display: flex;
     flex-direction: column;
@@ -67,51 +67,51 @@
     padding: 40px 120px;
 }
 
-.math-score-container p {
+.add-ten-score-container p {
     width: 300px;
     text-align: center;
     margin-bottom: 0;
 }
 
-.score-text {
+.add-ten-score-text {
     font-size: 40px;
 }
 
-.score-result {
+.add-ten-score-result {
     font-size: 80px;
     margin-top: 0;
 }
 
 @media (max-width: 767px) {
-    .math-question-container {
+    .add-ten-container {
         margin: 90px 30px;
         padding-top: 20px;
         padding-bottom: 60px;
     }
 
-    .question-number {
+    .add-ten-question-number {
         font-size: 1.5rem;
     }
 
-    .problem-text {
+    .add-ten-problem-text {
         font-size: 1.8rem;
         margin-top: 1rem;
         margin-bottom: 0;
     }
 
-    .math-question-container input {
+    .add-ten-question-container input {
         margin-top: 1rem;
         width: 16rem;
         height: 2.5rem;
     }
 
-    .math-question-container button {
+    .add-ten-question-container button {
         margin-top: 0.5rem;
         width: 16rem;
         height: 3rem;
     }
 
-    .math-score-container {
+    .add-ten-score-container {
         /* border: 2px solid red; */
         margin: 60px 100px 100px 100px;
         display: flex;

@@ -37,7 +37,7 @@ const AdditionTwenty = () => {
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
                 <section className="add-twenty-question-container">
-                    <p　className="add-twenty-question-number">Question {questionNumber}</p>
+                    <p className="add-twenty-question-number">Question {questionNumber}</p>
                     <p className="add-twenty-problem-text">{problem.num1} + {problem.num2}</p>
                     <form onSubmit={handleSubmit}>
                         <input
