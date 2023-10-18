@@ -1,3 +1,6 @@
+export function checkAnswer(correctAnswer: number, userAnswer: number) {
+    return userAnswer === correctAnswer;
+}
 export function generateNumber(limit: number = 10) {
     return Math.floor(Math.random() * limit + 1)
 }
@@ -94,14 +97,39 @@ export function subtract(numLimit: number) {
     
     if (numLimit > 10) {
         while (num1 < 11 || num1 < num2) {
-            num1 = generateNumber(numLimit)
-            num2 = generateNumber(numLimit)
+            num1 = generateNumber(numLimit);
+            num2 = generateNumber(numLimit);
         }
     }
 
-    return {num1, num2, difference: num1 - num2}
-}
+    return {num1, num2, difference: num1 - num2};
+};
 
-export function checkAnswer(correctAnswer: number, userAnswer: number) {
-    return userAnswer === correctAnswer;
+export function compareTwoNumbers (numLimit: number, numRange: number) {
+    const generateNumberWithinRange = (limit: number, range: number) => {
+        return generateNumber(range) + (limit - range) - 1;
+    }
+
+    let num1 = generateNumberWithinRange(numLimit, numRange);
+    let num2 = generateNumberWithinRange(numLimit, numRange);
+
+    let answerChoices = {greaterThan: ">", lessThan: "<", equalTo: "="};
+
+    let differenceBetweenNums = () => {
+        if (num1 > num2) {
+            return answerChoices.greaterThan;
+        } else if (num1 < num2){
+            return answerChoices.lessThan;
+        } else {
+            return answerChoices.equalTo;
+        }
+    }
+
+    const correctAnswer = differenceBetweenNums();
+
+    return {
+        num1: num1,
+        num2: num2,
+        correctAnswer: correctAnswer
+    }
 }
