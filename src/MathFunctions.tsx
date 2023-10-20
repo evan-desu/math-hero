@@ -105,7 +105,9 @@ export function subtract(numLimit: number) {
     return {num1, num2, difference: num1 - num2};
 };
 
-export function compareTwoNumbers (numLimit: number, numRange: number) {
+export function compareTwoNumbers (numLimit: number) {
+    const numRange = generateNumber(50);
+
     const generateNumberWithinRange = (limit: number, range: number) => {
         return generateNumber(range) + (limit - range) - 1;
     }
@@ -113,15 +115,15 @@ export function compareTwoNumbers (numLimit: number, numRange: number) {
     let num1 = generateNumberWithinRange(numLimit, numRange);
     let num2 = generateNumberWithinRange(numLimit, numRange);
 
-    let answerChoices = {greaterThan: ">", lessThan: "<", equalTo: "="};
+    // let answerChoices = {greaterThan: ">", lessThan: "<", equalTo: "="};
 
     let differenceBetweenNums = () => {
         if (num1 > num2) {
-            return answerChoices.greaterThan;
+            return ">";
         } else if (num1 < num2){
-            return answerChoices.lessThan;
+            return "<";
         } else {
-            return answerChoices.equalTo;
+            return "=";
         }
     }
 
