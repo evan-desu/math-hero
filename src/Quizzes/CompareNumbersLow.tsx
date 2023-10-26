@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { compareTwoNumbers } from "../MathFunctions";
-import './CompareNumbers.css'
+import './CompareNumbersLow.css'
 
-const CompareNumbers = () => {
+const CompareNumbers100 = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 0, correctAnswer: '' });
     const [userAnswer, setUserAnswer] = useState('');
     const [questionNumber, setQuestionNumber] = useState(1);
@@ -33,14 +33,14 @@ const CompareNumbers = () => {
     }
 
     return (
-        <main className="compare-numbers-container">
+        <main className="compare-100-container">
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
-                <div className="question-container">
-                    <p>Question {questionNumber}</p>
-                    <div className="comparison-container">
+                <div className="compare-100-question-container">
+                    <p className="compare-100-question-number">Question {questionNumber}</p>
+                    <div className="compare-100-comparison-container">
                         <p>{problem.num1}</p>
-                        <form onSubmit={handleSubmit} className="answer-choice-container">
+                        <form onSubmit={handleSubmit} className="compare-100-answer-container">
                             <button type="submit" value="<" onClick={() => setUserAnswer("<")}>{`<`}</button>
                             <button type="submit" value="=" onClick={() => setUserAnswer("=")}>{`=`}</button>
                             <button type="submit" value=">" onClick={() => setUserAnswer(">")}>{`>`}</button>
@@ -49,13 +49,13 @@ const CompareNumbers = () => {
                     </div>
                 </div>
             ) : (
-                <section className="compare-score-container">
-                    <p className="compare-score-text">Your score: </p>
-                    <p className="compare-score-result">{score}/10</p>
+                <section className="compare-100-score-container">
+                    <p className="compare-100-score-text">Your score: </p>
+                    <p className="compare-100-score-result">{score}/10</p>
                 </section>
             )}
         </main>
     )
 }
 
-export default CompareNumbers;
+export default CompareNumbers100;
