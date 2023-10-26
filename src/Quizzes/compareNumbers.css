@@ -1,0 +1,11 @@
+.answer-choice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.answer-choice-container button {
+    width: 100px;
+    height: 30px;
+    border: none;
+}
