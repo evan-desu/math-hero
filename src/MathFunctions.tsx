@@ -105,15 +105,38 @@ export function subtract(numLimit: number) {
     return {num1, num2, difference: num1 - num2};
 };
 
-export function compareTwoNumbers (numLimit: number) {
-    const numRange = generateNumber(50);
-
-    const generateNumberWithinRange = (limit: number, range: number) => {
-        return generateNumber(range) + (limit - range) - 1;
+export function compareTwoNumbers(numLimit: number, numRange: number) {
+    const generateNumber = (limit: number) => {
+        let num = 0;
+        while (num === 0) {
+            num = Math.floor(Math.random() * limit) + 1;
+        }
+        return num;
     }
+    
+    const baseNumber = generateNumber(numLimit);
+    const offset = generateNumber(numRange + 1); // +1 to include the range limit
 
-    let num1 = generateNumberWithinRange(numLimit, numRange);
-    let num2 = generateNumberWithinRange(numLimit, numRange);
+    // Decide whether to add or subtract the offset
+    const addOrSubtract = Math.random() > 0.5 ? 1 : -1;
+    const secondNumber = baseNumber + addOrSubtract * offset;
+
+    // Ensure the second number is within the limit
+    let num1 = generateNumber(numLimit);
+    // let offset = generateNumber(numRange);
+
+    let num2: number;
+    if (Math.random() > 0.5) {
+        num2 = num1 + offset;
+        if (num2 > numLimit) {
+            num2 = num1 - offset;
+        }
+    } else {
+        num2 = num1 - offset;
+        if (num2 < 1) {
+            num2 = num1 + offset;
+        }
+    }
 
     // let answerChoices = {greaterThan: ">", lessThan: "<", equalTo: "="};
 
