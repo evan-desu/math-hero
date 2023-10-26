@@ -13,14 +13,17 @@ const CompareNumbers = () => {
     return (
         <main>
             <h1>Compare Two Numbers</h1>
-            <div className="comparison-container">
-            <p>34</p>
-            <section className="answer-choice-container">
-                <button>{`<`}</button>
-                <button>{`=`}</button>
-                <button>{`>`}</button>
-            </section>
-            <p>32</p>
+            <div className="question-container">
+                <p>Questions 1</p>
+                <div className="comparison-container">
+                    <p>34</p>
+                    <section className="answer-choice-container">
+                        <button>{`<`}</button>
+                        <button>{`=`}</button>
+                        <button>{`>`}</button>
+                    </section>
+                    <p>32</p>
+                </div>
             </div>
         </main>
     )

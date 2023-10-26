@@ -1,11 +1,34 @@
+.question-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+.comparison-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid green;
+}
+
+.comparison-container p {
+    font-size: 80px;
+    border: 1px solid white;
+    margin: 0; /* Reduces the default top/bottom margins of the <p> elements */
+}
 .answer-choice-container {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    border: 1px solid blue;
 }
 
 .answer-choice-container button {
     width: 100px;
-    height: 30px;
+    height: 40px;
     border: none;
+    border-radius: 5px;
+    font-size: 40px;
 }
