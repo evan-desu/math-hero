@@ -21,12 +21,13 @@
 
 .grade-two-quiz-btn {
     font-family: 'Andika', sans-serif;
-    font-size: 1.7em;
+    font-size: 1.2em;
     color: black;
     border: none;
     border-radius: 15px;
     width: 10em;
-    height: 4em;
+    height: 3.5em;
+    line-height: 1.3em;
 }
 
 button:hover {
