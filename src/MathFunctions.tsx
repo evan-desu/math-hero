@@ -1,10 +1,14 @@
+// Checks is user answer matches correct answer
 export function checkAnswer(correctAnswer: number, userAnswer: number) {
     return userAnswer === correctAnswer;
 }
+
+// Generates a random number
 export function generateNumber(limit: number = 10) {
     return Math.floor(Math.random() * limit + 1)
 }
 
+// Generates a random emoji with an count of 1 - 10
 export function generateEmoji(limit: number = 10) {
     const emojis = {
         circles: '🟢', 
@@ -30,6 +34,7 @@ export function generateEmoji(limit: number = 10) {
     return { emoji, emojiName, count };
 };
 
+// Generates an array of mixed emojis
 export function mixedCount(items: number, singleLimit: number, totalLimit: number):
     { emojis: { symbol: string; name: string; }[], counts: { [key: string]: number } } {
     const emojis = {
@@ -74,6 +79,7 @@ export function mixedCount(items: number, singleLimit: number, totalLimit: numbe
     return { emojis: result, counts };
 }
 
+// Generates an addition problem
 export function add(sumLimit: number) {
     let num1 = generateNumber(sumLimit);
     let num2 = generateNumber(sumLimit);
@@ -86,6 +92,29 @@ export function add(sumLimit: number) {
     return {num1, num2, sum: num1 + num2}
 }
 
+// Generates an addition problem with three addends
+export function addThreeNumbers(sumLimit: number) {
+    let num1 = generateNumber(sumLimit - 5);
+    let num2 = generateNumber(sumLimit - 5);
+    let num3 = generateNumber(sumLimit - 5);
+
+    while ((num1 + num2 + num3) > sumLimit) {
+        num1 = generateNumber(sumLimit - 5);
+        num2 = generateNumber(sumLimit - 5);
+        num3 = generateNumber(sumLimit - 5);
+    }
+
+    return {
+        num1, 
+        num2, 
+        num3, 
+        sum: num1 + num2 + num3
+    }
+}
+
+console.log("Add Three", addThreeNumbers(20));
+
+// Generates a subtraction problem
 export function subtract(numLimit: number) {
     let num1 = generateNumber(numLimit);
     let num2 = generateNumber(numLimit);
@@ -105,6 +134,7 @@ export function subtract(numLimit: number) {
     return {num1, num2, difference: num1 - num2};
 };
 
+// Generates two random numbers and a matching comparison operator
 export function compareTwoNumbers(numLimit: number, numRange: number) {
     const generateNumber = (limit: number) => {
         let num = 0;
@@ -117,13 +147,10 @@ export function compareTwoNumbers(numLimit: number, numRange: number) {
     const baseNumber = generateNumber(numLimit);
     const offset = generateNumber(numRange + 1); // +1 to include the range limit
 
-    // Decide whether to add or subtract the offset
     const addOrSubtract = Math.random() > 0.5 ? 1 : -1;
     const secondNumber = baseNumber + addOrSubtract * offset;
 
-    // Ensure the second number is within the limit
     let num1 = generateNumber(numLimit);
-    // let offset = generateNumber(numRange);
 
     let num2: number;
     if (Math.random() > 0.5) {
@@ -137,8 +164,6 @@ export function compareTwoNumbers(numLimit: number, numRange: number) {
             num2 = num1 + offset;
         }
     }
-
-    // let answerChoices = {greaterThan: ">", lessThan: "<", equalTo: "="};
 
     let differenceBetweenNums = () => {
         if (num1 > num2) {
