@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { checkAnswer, add, generateNumber } from '../MathFunctions'
+import { checkAnswer, generateNumber } from '../MathFunctions'
 import './AdditionByTen.css'
 
 const AdditionByTen = () => {

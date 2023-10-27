@@ -112,8 +112,6 @@ export function addThreeNumbers(sumLimit: number) {
     }
 }
 
-console.log("Add Three", addThreeNumbers(20));
-
 // Generates a subtraction problem
 export function subtract(numLimit: number) {
     let num1 = generateNumber(numLimit);
