@@ -20,7 +20,10 @@ const GradeTwo = () => {
                         Subtraction <br className="desktop-break" />(Under 20)
                     </button>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("compare-numbers-100")}>
-                        Comparisons <br className="desktop-break" />(Under 100)
+                        Comparisons <br className="desktop-break" />(To 100)
+                    </button>
+                    <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("compare-numbers-300")}>
+                        Comparisons <br className="desktop-break" />(To 300)
                     </button>
                 </div>
             </section>

@@ -1,24 +1,24 @@
-.compare-100-container {
+.compare-300-container {
     margin: 60px 450px 100px 450px;
     padding-bottom: 60px;
     background-color: whitesmoke;
     border-radius: 25px;
 }
 
-.compare-100-question-container {
+.compare-300-question-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 20px;
 }
 
-.compare-100-question-number {
+.compare-300-question-number {
     font-size: 3rem;
     margin-top: 10px;
     padding-top: 10px;
 }
 
-.compare-100-comparison-container {
+.compare-300-comparison-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,21 +26,21 @@
     gap: 20px;
 }
 
-.compare-100-comparison-container p {
-    font-size: 80px;
+.compare-300-comparison-container p {
+    font-size: 70px;
     margin: 0; /* Reduces the default top/bottom margins of the <p> elements */
     flex: 1; /* Ensures both numbers take up equal space */
-    width: 100px;
+    width: 140px;
     text-align: center;
 }
 
-.compare-100-answer-container {
+.compare-300-answer-container {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.compare-100-answer-container button {
+.compare-300-answer-container button {
     font-family: 'Andika', sans-serif;
     font-size: 2rem;
     color: white;
@@ -52,7 +52,7 @@
     border-radius: 15px;
 }
 
-.compare-100-score-container {
+.compare-300-score-container {
     margin: 90px 100px 100px 100px;
     display: flex;
     flex-direction: column;
@@ -60,33 +60,33 @@
     padding: 40px 120px;
 }
 
-.compare-100-score-container p {
+.compare-300-score-container p {
     width: 300px;
     text-align: center;
     margin-bottom: 0;
 }
 
-.compare-100-score-text {
+.compare-300-score-text {
     font-size: 40px;
 }
 
-.compare-100-score-result {
+.compare-300-score-result {
     font-size: 80px;
     margin-top: 0;
 }
 
 @media (max-width: 767px) {
-    .compare-100-container {
+    .compare-300-container {
         margin: 90px 30px;
         padding-top: 20px;
         padding-bottom: 60px;
     }
 
-    .compare-100-question-number {
+    .compare-300-question-number {
         font-size: 1.5rem;
     }
 
-    .compare-100-comparison-container p {
+    .compare-300-comparison-container p {
         font-size: 50px;
         margin: 0; /* Reduces the default top/bottom margins of the <p> elements */
         flex: 1; /* Ensures both numbers take up equal space */
@@ -94,7 +94,7 @@
         text-align: center;
     }
 
-    .compare-100-answer-container button {
+    .compare-300-answer-container button {
         font-size: 2rem;
         color: white;
         background-color: #0F52BA;
@@ -102,7 +102,7 @@
         line-height: 2rem;
     }
 
-    .compare-100-score-container {
+    .compare-300-score-container {
         margin: 40px 20px;
         padding: 10px 20px;
         display: flex;
