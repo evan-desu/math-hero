@@ -14,16 +14,16 @@ const GradeTwo = () => {
                 <h2>Select a quiz:</h2>
                 <div className='grade-two-quiz-button-container'>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
-                        Addition <br className="desktop-break" />(To 20)
+                        Addition <br className="desktop-break" />(Level 1)
                     </button>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("subtract-under-20")}>
-                        Subtraction <br className="desktop-break" />(Under 20)
+                        Subtraction <br className="desktop-break" />(Level 1)
                     </button>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("compare-numbers-100")}>
-                        Comparisons <br className="desktop-break" />(To 100)
+                        Comparisons <br className="desktop-break" />(Level 1)
                     </button>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("compare-numbers-300")}>
-                        Comparisons <br className="desktop-break" />(To 300)
+                        Comparisons <br className="desktop-break" />(Level 2)
                     </button>
                 </div>
             </section>

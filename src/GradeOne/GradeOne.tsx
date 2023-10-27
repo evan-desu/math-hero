@@ -14,23 +14,26 @@ const GradeOne = () => {
                 <h2>Welcome to Grade One!</h2>
                 <h2>Select a quiz:</h2>
                 <div className="quiz-button-container">
-                    <button className="quiz-btn" onClick={() => handleQuizClick("count-single")}>
-                        Counting <br className="desktop-break" />(Single Item)
+                    <button id="counting-single-item" className="quiz-btn" onClick={() => handleQuizClick("count-single")}>
+                        Counting <br className="desktop-break" />(Level 1)
                     </button>
-                    <button className="quiz-btn" onClick={() => handleQuizClick("count-mixed")}>
-                        Counting <br className="desktop-break" />(Mixed Items)
+                    <button id="counting-mixed-items" className="quiz-btn" onClick={() => handleQuizClick("count-mixed")}>
+                        Counting <br className="desktop-break" />(Level 2)
                     </button>
-                    <button className="quiz-btn" onClick={() => handleQuizClick("add-to-10")}>
-                        Addition <br className="desktop-break" />(To 10)
+                    <button id="addition-to-ten" className="quiz-btn" onClick={() => handleQuizClick("add-to-10")}>
+                        Addition <br className="desktop-break" />(Level 1)
                     </button>
-                    <button className="quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
-                        Addition <br className="desktop-break" />(To 20)
+                    <button id="addition-by-ten" className="quiz-btn" onClick={() => handleQuizClick("add-by-10")}>
+                        Addition <br className="desktop-break" />(Level 2)
                     </button>
-                    <button className="quiz-btn" onClick={() => handleQuizClick("subtract-under-10")}>
-                        Subtraction <br className="desktop-break" />(Under 10)
+                    <button id="addition-to-twenty" className="quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
+                        Addition <br className="desktop-break" />(Level 3)
                     </button>
-                    <button className="quiz-btn" onClick={() => handleQuizClick("subtract-under-20")}>
-                        Subtraction <br className="desktop-break" />(Under 20)
+                    <button id="subtraction-from-ten" className="quiz-btn" onClick={() => handleQuizClick("subtract-under-10")}>
+                        Subtraction <br className="desktop-break" />(Level 1)
+                    </button>
+                    <button id="subtraction-from-twenty" className="quiz-btn" onClick={() => handleQuizClick("subtract-under-20")}>
+                        Subtraction <br className="desktop-break" />(Level 2)
                     </button>
                 </div>
             </section>
