@@ -87,10 +87,10 @@
     }
 
     .compare-300-comparison-container p {
-        font-size: 50px;
+        font-size: 45px;
         margin: 0; /* Reduces the default top/bottom margins of the <p> elements */
         flex: 1; /* Ensures both numbers take up equal space */
-        width: 60px;
+        width: 75px;
         text-align: center;
     }
 
