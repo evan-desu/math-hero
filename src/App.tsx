@@ -21,6 +21,7 @@ import CountingMixed from './Quizzes/CountingMixed';
 import CompareNumbers100 from './Quizzes/CompareNumbersLow';
 import CompareNumbers300 from './Quizzes/CompareNumbersHigh';
 import AdditionOfThree from './Quizzes/AdditionOfThree';
+import SubtractionOfThree from './Quizzes/SubtractionOfThree';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
           <Route path='/add-three' element={ <AdditionOfThree /> }/>
           <Route path='/subtract-under-10' element={ <SubtractionTen /> }/>
           <Route path='/subtract-10' element={ <SubtractTenFrom /> }/>
+          <Route path='/subtract-three' element={ <SubtractionOfThree /> }/>
           <Route path='/subtract-under-20' element={ <SubtractionTwenty /> }/>
           <Route path='/count-single' element={ <CountingSingle /> }/>
           <Route path='/count-mixed' element={ <CountingMixed /> }/>

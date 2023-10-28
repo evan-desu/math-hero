@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { checkAnswer, addThreeNumbers } from '../MathFunctions'
-import './AdditionOfThree.css'
+import { checkAnswer, subtractWithThreeNums } from '../MathFunctions'
+import './SubtractionOfThree.css'
 
 const SubtractionOfThree = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 0, num3: 0, sum: 0 });
@@ -11,7 +11,7 @@ const SubtractionOfThree = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        setProblem(addThreeNumbers(20));
+        // setProblem(addThreeNumbers(20));
         setIsLoading(false);
     }, []);
 
@@ -24,7 +24,7 @@ const SubtractionOfThree = () => {
 
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            setProblem(addThreeNumbers(20));
+            // setProblem(addThreeNumbers(20));
         } else {
             setIsFinished(true);
         }
