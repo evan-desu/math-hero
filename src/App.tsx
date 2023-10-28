@@ -14,6 +14,7 @@ import AdditionTen from './Quizzes/AdditionTen';
 import AdditionByTen from './Quizzes/AdditionByTen';
 import AdditionTwenty from './Quizzes/AdditionTwenty';
 import SubtractionTen from './Quizzes/SubtractionTen';
+import SubtractTenFrom from './Quizzes/SubtractTenFrom';
 import SubtractionTwenty from './Quizzes/SubtractionTwenty';
 import CountingSingle from './Quizzes/CountingSingle';
 import CountingMixed from './Quizzes/CountingMixed';
@@ -41,6 +42,7 @@ function App() {
           <Route path='/add-to-20' element={ <AdditionTwenty /> }/>
           <Route path='/add-three' element={ <AdditionOfThree /> }/>
           <Route path='/subtract-under-10' element={ <SubtractionTen /> }/>
+          <Route path='/subtract-10' element={ <SubtractTenFrom /> }/>
           <Route path='/subtract-under-20' element={ <SubtractionTwenty /> }/>
           <Route path='/count-single' element={ <CountingSingle /> }/>
           <Route path='/count-mixed' element={ <CountingMixed /> }/>

@@ -35,8 +35,11 @@ const GradeOne = () => {
                     <button id="subtraction-from-ten" className="quiz-btn" onClick={() => handleQuizClick("subtract-under-10")}>
                         Subtraction <br className="desktop-break" />(Level 1)
                     </button>
-                    <button id="subtraction-from-twenty" className="quiz-btn" onClick={() => handleQuizClick("subtract-under-20")}>
+                    <button id="subtraction-ten" className="quiz-btn" onClick={() => handleQuizClick("subtract-10")}>
                         Subtraction <br className="desktop-break" />(Level 2)
+                    </button>
+                    <button id="subtraction-from-twenty" className="quiz-btn" onClick={() => handleQuizClick("subtract-under-20")}>
+                        Subtraction <br className="desktop-break" />(Level 3)
                     </button>
                 </div>
             </section>
