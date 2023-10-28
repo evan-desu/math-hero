@@ -140,6 +140,8 @@ export function subtractWithThreeNums(numLimit: number, offset: number) {
 
     while (num1 < (num2 + num3)) {
         num1 = generateNumber(numLimit);
+        num2 = generateNumber(numLimit - offset);
+        num3 = generateNumber(numLimit - offset);
     }
     return {
         num1,
@@ -159,11 +161,11 @@ export function compareTwoNumbers(numLimit: number, numRange: number) {
         return num;
     }
     
-    const baseNumber = generateNumber(numLimit);
+    // const baseNumber = generateNumber(numLimit);
     const offset = generateNumber(numRange + 1); // +1 to include the range limit
 
-    const addOrSubtract = Math.random() > 0.5 ? 1 : -1;
-    const secondNumber = baseNumber + addOrSubtract * offset;
+    // const addOrSubtract = Math.random() > 0.5 ? 1 : -1;
+    // const secondNumber = baseNumber + addOrSubtract * offset;
 
     let num1 = generateNumber(numLimit);
 

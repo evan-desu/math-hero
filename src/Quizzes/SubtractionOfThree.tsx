@@ -3,7 +3,7 @@ import { checkAnswer, subtractWithThreeNums } from '../MathFunctions'
 import './SubtractionOfThree.css'
 
 const SubtractionOfThree = () => {
-    const [problem, setProblem] = useState({ num1: 0, num2: 0, num3: 0, sum: 0 });
+    const [problem, setProblem] = useState({ num1: 0, num2: 0, num3: 0, diff: 0 });
     const [userAnswer, setUserAnswer] = useState('');
     const [questionNumber, setQuestionNumber] = useState(1);
     const [score, setScore] = useState(0);
@@ -11,20 +11,20 @@ const SubtractionOfThree = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        // setProblem(addThreeNumbers(20));
+        setProblem(subtractWithThreeNums(10, 2));
         setIsLoading(false);
     }, []);
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
-        if (checkAnswer(parseInt(userAnswer), problem.sum)) {
+        if (checkAnswer(parseInt(userAnswer), problem.diff)) {
             setScore(score + 1);
         }
 
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            // setProblem(addThreeNumbers(20));
+            setProblem(subtractWithThreeNums(10, 2));
         } else {
             setIsFinished(true);
         }
@@ -33,13 +33,12 @@ const SubtractionOfThree = () => {
     }
 
     return (
-        <main className="add-three-container">
-            <h2>Subtraction of Thre Nums</h2>
-            {/* {isLoading && <p>Loading...</p>}
+        <main className="subtract-three-container">
+            {isLoading && <p>Loading...</p>}
             {!isFinished ? (
-                <section className="add-three-question-container">
-                    <p className="add-three-question-number">Question {questionNumber}</p>
-                    <p className="add-three-problem-text">{problem.num1} + {problem.num2} + {problem.num3}</p>
+                <section className="subtract-three-question-container">
+                    <p className="subtract-three-question-number">Question {questionNumber}</p>
+                    <p className="subtract-three-problem-text">{problem.num1} - {problem.num2} - {problem.num3}</p>
                     <form onSubmit={handleSubmit}>
                         <input
                             type='number'
@@ -51,11 +50,11 @@ const SubtractionOfThree = () => {
                     </form>
                 </section>
             ) : (
-                <section className="add-three-score-container">
-                    <p className="add-three-score-text">Your score: </p>
-                    <p className="add-three-score-result">{score}/10</p>
+                <section className="subtract-three-score-container">
+                    <p className="subtract-three-score-text">Your score: </p>
+                    <p className="subtract-three-score-result">{score}/10</p>
                 </section>
-            )} */}
+            )}
         </main>
     );
 }
