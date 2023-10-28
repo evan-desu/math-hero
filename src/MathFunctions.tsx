@@ -132,6 +132,23 @@ export function subtract(numLimit: number) {
     return {num1, num2, difference: num1 - num2};
 };
 
+// Generates a subtraction problem with three numbers
+export function subtractWithThreeNums(numLimit: number, offset: number) {
+    let num1 = generateNumber(numLimit);
+    let num2 = generateNumber(numLimit - offset);
+    let num3 = generateNumber(numLimit - offset);
+
+    while (num1 < (num2 + num3)) {
+        num1 = generateNumber(numLimit);
+    }
+    return {
+        num1,
+        num2,
+        num3,
+        diff: num1 - num2 - num3
+    }
+}
+
 // Generates two random numbers and a matching comparison operator
 export function compareTwoNumbers(numLimit: number, numRange: number) {
     const generateNumber = (limit: number) => {
