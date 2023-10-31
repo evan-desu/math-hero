@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { subtract, checkAnswer } from '../MathFunctions';
-import './SubtractionTen.css'
+import { generateEmoji, checkAnswer } from '../../MathFunctions';
+import './CountingSingle.css'
 
-const SubtractionTen = () => {
-    const [problem, setProblem] = useState({ num1: 0, num2: 0, difference: 0 });
+const CountingSingle = () => {
+    const [problem, setProblem] = useState({ emoji: '', emojiName: '', count: 0 });
     const [questionNumber, setQuestionNumber] = useState(1);
     const [userAnswer, setUserAnswer] = useState('');
     const [score, setScore] = useState(0);
@@ -11,33 +11,41 @@ const SubtractionTen = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        setProblem(subtract(10));
+        let newProblem = generateEmoji();
+        setProblem(newProblem);
         setIsLoading(false);
-    }, []);
+    }, [])
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
-        if(checkAnswer(parseInt(userAnswer), problem.difference)) {
+        if(checkAnswer(parseInt(userAnswer), problem.count)) {
             setScore(score + 1);
         }
 
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            setProblem(subtract(10));
+            let newProblem = generateEmoji();
+            setProblem(newProblem);
         } else {
             setIsFinished(true);
         }
         setUserAnswer('');
-    }
+    };
 
     return (
-        <main className="subtract-ten-container">
+        <main className="counting-single--quiz-container">
+            {/* <h2>Counting Single Items</h2> */}
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
-                <section className="subtract-ten-question-container">
-                    <p className="subtract-ten-question-number">Question {questionNumber}</p>
-                    <p className="subtract-ten-problem-text">{problem.num1} - {problem.num2}</p>
+                <section className="question-container">
+                    <p className="question-number">Question {questionNumber}</p>
+                    <p className="question-text">How many {problem.emojiName} {problem.emoji} are there?</p>
+                    <div className="counting-items">
+                        {Array.from({ length: problem.count }).map((_, i) => (
+                            <span key={i}>{problem.emoji}</span>
+                        ))}
+                    </div>
                     <form onSubmit={handleSubmit}>
                         <input
                             type='number'
@@ -49,13 +57,13 @@ const SubtractionTen = () => {
                     </form>
                 </section>
             ) : (
-                <section className="subtract-ten-score-container">
-                    <p className="subtract-ten-score-text">Your score:</p>
-                    <p className="subtract-ten-score-result">{score}/10</p>
+                <section className="score-container">
+                    <p className="score-text">Your score: </p>
+                    <p className="score-result">{score}/10</p>
                 </section>
             )}
         </main>
     );
 }
  
-export default SubtractionTen;
+export default CountingSingle;

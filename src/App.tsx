@@ -10,18 +10,18 @@ import GradeThree from './GradeThree/GradeThree';
 import GradeFour from './GradeFour/GradeFour';
 import GradeFive from './GradeFive/GradeFive';
 import GradeSix from './GradeSix/GradeSix';
-import AdditionTen from './Quizzes/AdditionTen';
-import AdditionByTen from './Quizzes/AdditionByTen';
-import AdditionTwenty from './Quizzes/AdditionTwenty';
-import SubtractionTen from './Quizzes/SubtractionTen';
-import SubtractTenFrom from './Quizzes/SubtractTenFrom';
-import SubtractionTwenty from './Quizzes/SubtractionTwenty';
-import CountingSingle from './Quizzes/CountingSingle';
-import CountingMixed from './Quizzes/CountingMixed';
-import CompareNumbers100 from './Quizzes/CompareNumbersLow';
-import CompareNumbers300 from './Quizzes/CompareNumbersHigh';
-import AdditionOfThree from './Quizzes/AdditionOfThree';
-import SubtractionOfThree from './Quizzes/SubtractionOfThree';
+import AdditionTen from './Quizzes/Addition/AdditionTen';
+import AdditionByTen from './Quizzes/Addition/AdditionByTen';
+import AdditionTwenty from './Quizzes/Addition/AdditionTwenty';
+import SubtractionTen from './Quizzes/Subtraction/SubtractionTen';
+import SubtractTenFrom from './Quizzes/Subtraction/SubtractTenFrom';
+import SubtractionTwenty from './Quizzes/Subtraction/SubtractionTwenty';
+import CountingSingle from './Quizzes/Counting/CountingSingle';
+import CountingMixed from './Quizzes/Counting/CountingMixed';
+import CompareNumbers100 from './Quizzes/Comparisons/CompareNumbersLow';
+import CompareNumbers300 from './Quizzes/Comparisons/CompareNumbersHigh';
+import AdditionOfThree from './Quizzes/Addition/AdditionOfThree';
+import SubtractionOfThree from './Quizzes/Subtraction/SubtractionOfThree';
 
 function App() {
 

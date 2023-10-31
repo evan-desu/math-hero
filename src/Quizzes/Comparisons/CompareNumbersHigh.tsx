@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { compareTwoNumbers } from "../MathFunctions";
-import './CompareNumbersLow.css'
+import { compareTwoNumbers } from "../../MathFunctions";
+import './CompareNumbersHigh.css'
 
-const CompareNumbers100 = () => {
+const CompareNumbers300 = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 0, correctAnswer: '' });
     const [userAnswer, setUserAnswer] = useState('');
     const [questionNumber, setQuestionNumber] = useState(1);
@@ -11,7 +11,7 @@ const CompareNumbers100 = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        setProblem(compareTwoNumbers(100, 50));
+        setProblem(compareTwoNumbers(300, 100));
         setIsLoading(false);
     }, []);
 
@@ -24,7 +24,7 @@ const CompareNumbers100 = () => {
 
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            setProblem(compareTwoNumbers(100, 50));
+            setProblem(compareTwoNumbers(300, 100));
         } else {
             setIsFinished(true);
         }
@@ -33,14 +33,14 @@ const CompareNumbers100 = () => {
     }
 
     return (
-        <main className="compare-100-container">
+        <main className="compare-300-container">
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
-                <div className="compare-100-question-container">
-                    <p className="compare-100-question-number">Question {questionNumber}</p>
-                    <div className="compare-100-comparison-container">
+                <div className="compare-300-question-container">
+                    <p className="compare-300-question-number">Question {questionNumber}</p>
+                    <div className="compare-300-comparison-container">
                         <p>{problem.num1}</p>
-                        <form onSubmit={handleSubmit} className="compare-100-answer-container">
+                        <form onSubmit={handleSubmit} className="compare-300-answer-container">
                             <button type="submit" value="<" onClick={() => setUserAnswer("<")}>{`<`}</button>
                             <button type="submit" value="=" onClick={() => setUserAnswer("=")}>{`=`}</button>
                             <button type="submit" value=">" onClick={() => setUserAnswer(">")}>{`>`}</button>
@@ -49,13 +49,13 @@ const CompareNumbers100 = () => {
                     </div>
                 </div>
             ) : (
-                <section className="compare-100-score-container">
-                    <p className="compare-100-score-text">Your score: </p>
-                    <p className="compare-100-score-result">{score}/10</p>
+                <section className="compare-300-score-container">
+                    <p className="compare-300-score-text">Your score: </p>
+                    <p className="compare-300-score-result">{score}/10</p>
                 </section>
             )}
         </main>
     )
 }
 
-export default CompareNumbers100;
+export default CompareNumbers300;

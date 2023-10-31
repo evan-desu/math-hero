@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { mixedCount, checkAnswer } from "../MathFunctions";
+import { mixedCount, checkAnswer } from "../../MathFunctions";
 import './CountingMixed.css'
 
 const CountingMixed = () => {

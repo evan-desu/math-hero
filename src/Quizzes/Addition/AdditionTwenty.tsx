@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { add, checkAnswer } from '../MathFunctions'
-import './AdditionTen.css'
+import { add, checkAnswer } from '../../MathFunctions'
+import './AdditionTwenty.css'
 
-const AdditionTen = () => {
+const AdditionTwenty = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 0, sum: 0 });
     const [userAnswer, setUserAnswer] = useState('');
     const [questionNumber, setQuestionNumber] = useState(1);
@@ -11,21 +11,20 @@ const AdditionTen = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        setProblem(add(10));
+        setProblem(add(20));
         setIsLoading(false);
     }, []);
-    
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
-        if (checkAnswer(parseInt(userAnswer), problem.sum)) {
+        if(checkAnswer(parseInt(userAnswer), problem.sum)) {
             setScore(score + 1);
         }
 
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            setProblem(add(10));
+            setProblem(add(20));
         } else {
             setIsFinished(true);
         }
@@ -34,12 +33,12 @@ const AdditionTen = () => {
     }
 
     return (
-        <main className="add-ten-container">
+        <main className="add-twenty-container">
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
-                <section className="add-ten-question-container">
-                    <p className="add-ten-question-number">Question {questionNumber}</p>
-                    <p className="add-ten-problem-text">{problem.num1} + {problem.num2}</p>
+                <section className="add-twenty-question-container">
+                    <p className="add-twenty-question-number">Question {questionNumber}</p>
+                    <p className="add-twenty-problem-text">{problem.num1} + {problem.num2}</p>
                     <form onSubmit={handleSubmit}>
                         <input
                             type='number'
@@ -51,13 +50,14 @@ const AdditionTen = () => {
                     </form>
                 </section>
             ) : (
-                <section className="add-ten-score-container">
-                    <p className="add-ten-score-text">Your score: </p>
-                    <p className="add-ten-score-result">{score}/10</p>
+                <section className="add-twenty-score-container">
+                    <p className="add-twenty-score-text">Your score: </p>
+                    <p className="add-twenty-score-result">{score}/10</p>
                 </section>
             )}
         </main>
+
     );
 }
  
-export default AdditionTen;
+export default AdditionTwenty;

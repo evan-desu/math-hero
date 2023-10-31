@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { add, checkAnswer } from '../MathFunctions'
-import './AdditionTwenty.css'
+import { checkAnswer, addThreeNumbers } from '../../MathFunctions'
+import './AdditionOfThree.css'
 
-const AdditionTwenty = () => {
-    const [problem, setProblem] = useState({ num1: 0, num2: 0, sum: 0 });
+const AdditionOfThree = () => {
+    const [problem, setProblem] = useState({ num1: 0, num2: 0, num3: 0, sum: 0 });
     const [userAnswer, setUserAnswer] = useState('');
     const [questionNumber, setQuestionNumber] = useState(1);
     const [score, setScore] = useState(0);
@@ -11,20 +11,20 @@ const AdditionTwenty = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        setProblem(add(20));
+        setProblem(addThreeNumbers(20));
         setIsLoading(false);
     }, []);
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
-        if(checkAnswer(parseInt(userAnswer), problem.sum)) {
+        if (checkAnswer(parseInt(userAnswer), problem.sum)) {
             setScore(score + 1);
         }
 
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            setProblem(add(20));
+            setProblem(addThreeNumbers(20));
         } else {
             setIsFinished(true);
         }
@@ -33,12 +33,12 @@ const AdditionTwenty = () => {
     }
 
     return (
-        <main className="add-twenty-container">
+        <main className="add-three-container">
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
-                <section className="add-twenty-question-container">
-                    <p className="add-twenty-question-number">Question {questionNumber}</p>
-                    <p className="add-twenty-problem-text">{problem.num1} + {problem.num2}</p>
+                <section className="add-three-question-container">
+                    <p className="add-three-question-number">Question {questionNumber}</p>
+                    <p className="add-three-problem-text">{problem.num1} + {problem.num2} + {problem.num3}</p>
                     <form onSubmit={handleSubmit}>
                         <input
                             type='number'
@@ -50,14 +50,13 @@ const AdditionTwenty = () => {
                     </form>
                 </section>
             ) : (
-                <section className="add-twenty-score-container">
-                    <p className="add-twenty-score-text">Your score: </p>
-                    <p className="add-twenty-score-result">{score}/10</p>
+                <section className="add-three-score-container">
+                    <p className="add-three-score-text">Your score: </p>
+                    <p className="add-three-score-result">{score}/10</p>
                 </section>
             )}
         </main>
-
     );
 }
  
-export default AdditionTwenty;
+export default AdditionOfThree;

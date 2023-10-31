@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { subtract, checkAnswer } from "../MathFunctions";
+import { subtract, checkAnswer } from "../../MathFunctions";
 import './SubtractionTwenty.css'
 
 const SubtractionTwenty = () => {
