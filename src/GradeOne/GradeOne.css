@@ -10,16 +10,26 @@
     font-size: 1.2rem;
 }
 
-.quiz-button-container {
-    /* border: 2px solid red; */
+/* Grid Container */
+/* .quiz-button-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, max-content));
     gap: 3rem;
     justify-content: center;
     margin-bottom: 100px;
+} */
+
+/* Flex Container */
+.quiz-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 100px;;
 }
 
-.quiz-btn {
+/* fat buttons */
+/* .quiz-btn {
     font-family: 'Andika', sans-serif;
     font-size: 1.2em;
     color: black;
@@ -28,6 +38,25 @@
     width: 10em;
     height: 3.5em;
     line-height: 1.3em;
+} */
+
+/* thin buttons */
+.quiz-btn {
+    font-family: 'Andika', sans-serif;
+    font-size: 1.2em;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    width: 18em;
+    height: 2em;
+    line-height: 1.3em;
+}
+
+.quiz-button-container h3 {
+    /* border: 2px solid red; */
+    width: 18em;
+    text-align: left;
+    margin-bottom: -5px;
 }
 
 button:hover {
@@ -41,20 +70,51 @@ button:hover {
         align-items: center;
     }
 
-    .quiz-button-container {
+    /* Grid Container */
+    /* .quiz-button-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
         gap: 1.5rem;
+    } */
+
+    /* Flex Container */
+    .quiz-button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        margin-bottom: 100px;
+        gap: 1em
     }
 
-    .quiz-btn {
+    .quiz-button-container h3 {
+        /* border: 2px solid red; */
+        width: 12em;
+        text-align: left;
+        margin-bottom: -5px;
+    }
+
+    /* fat buttons */
+    /* .quiz-btn {
         font-size: 1.2em;
         color: black;
         border: none;
         border-radius: 15px;
         width: 10em;
         height: 4.5em;
+    } */
+
+    /* thin buttons */
+    .quiz-btn {
+        font-family: 'Andika', sans-serif;
+        font-size: 1em;
+        color: black;
+        border: none;
+        border-radius: 15px;
+        width: 14em;
+        height: 1.7em;
+        line-height: 1.3em;
     }
 
     /* .desktop-break {
