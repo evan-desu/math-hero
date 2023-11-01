@@ -15,8 +15,8 @@ const Navbar = () => {
             <section className="navbar-links">
                 <h3 className='navbar-link' onClick={handleHomeClick}>Home</h3>
                 <h3 className='navbar-link'>About</h3>
+                <LanguageSwitcher />
             </section>
-            <LanguageSwitcher />
         </nav>
     );
 }

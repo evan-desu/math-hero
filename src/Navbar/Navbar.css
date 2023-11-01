@@ -1,31 +1,5 @@
-/* .navbar-container {
-    background-color: #0F52BA;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.6rem;
-    padding: 0 10px;
-    box-shadow: 0px 1px 7px gray;
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    border: 3px solid red;
-}
-
-.navbar-links {
-    border: 3px solid pink;
-    display: flex;
-    justify-content: space-between;
-    gap: 6rem;
-    padding-right: 10rem;
-}
-
-.navbar-math-hero {
-    padding-left: 8rem;;
-  } */
-
 .navbar-container {
+    /* border: 2px solid green; */
     background-color: #0F52BA;
     display: flex;
     justify-content: space-between;
@@ -51,8 +25,12 @@
 
 .navbar-links {
     display: flex;
-    gap: 4rem;
+    gap: 1rem;
     padding-right: 0;
+    height: 70px;
+    /* margin-right: -700px; */
+    line-height: 1;
+    /* border: 1px solid red; */
 }
 
 .navbar-math-hero, .navbar-link:hover {
