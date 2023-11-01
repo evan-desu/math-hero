@@ -28,9 +28,23 @@
     gap: 1rem;
     padding-right: 0;
     height: 70px;
-    /* margin-right: -700px; */
     line-height: 1;
-    /* border: 1px solid red; */
+    border: 1px solid red;
+    align-items: center;
+}
+
+.navbar-links select {
+    height: 50%;
+    line-height: 1;
+    background-color: #0F52BA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Andika', sans-serif;
+    border: 1px solid white;
 }
 
 .navbar-math-hero, .navbar-link:hover {
