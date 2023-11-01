@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import './Navbar.css'
 
 const Navbar = () => {
@@ -15,6 +16,7 @@ const Navbar = () => {
                 <h3 className='navbar-link' onClick={handleHomeClick}>Home</h3>
                 <h3 className='navbar-link'>About</h3>
             </section>
+            <LanguageSwitcher />
         </nav>
     );
 }

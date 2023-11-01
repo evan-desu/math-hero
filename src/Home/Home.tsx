@@ -1,8 +1,10 @@
 import './Home.css'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     function handleGradeClick(grade: number) {
         navigate(`/grade${grade}`);
@@ -20,7 +22,7 @@ const Home = () => {
             <section className="home-grade-selection">
                 <h2>Select your elementary school grade:</h2>
                 <div className="home-button-container">
-                    <button className="grade-btn" onClick={() => handleGradeClick(1)}>Grade 1</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(1)}>{t('grade_one')}</button>
                     <button className="grade-btn" onClick={() => handleGradeClick(2)}>Grade 2</button>
                     <button className="grade-btn" onClick={() => handleGradeClick(3)}>Grade 3</button>
                     <button className="grade-btn" onClick={() => handleGradeClick(4)}>Grade 4</button>
