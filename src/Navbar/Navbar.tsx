@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import './Navbar.css'
+import './Navbar.css';
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -26,8 +26,8 @@ const Navbar = () => {
                     value={i18n.language}
                     onChange={handleLanguageChange}
                 >
-                        <option value="en">En</option>
-                        <option value="ja">Ja</option>
+                        <option className="language-option" data-lang="en" value="en">En</option>
+                        <option className="language-option" data-lang="ja" value="ja">Ja</option>
                 </select>
             </section>
         </nav>

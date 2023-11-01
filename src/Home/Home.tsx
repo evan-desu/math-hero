@@ -23,11 +23,11 @@ const Home = () => {
                 <h2>Select your elementary school grade:</h2>
                 <div className="home-button-container">
                     <button className="grade-btn" onClick={() => handleGradeClick(1)}>{t('grade_one')}</button>
-                    <button className="grade-btn" onClick={() => handleGradeClick(2)}>Grade 2</button>
-                    <button className="grade-btn" onClick={() => handleGradeClick(3)}>Grade 3</button>
-                    <button className="grade-btn" onClick={() => handleGradeClick(4)}>Grade 4</button>
-                    <button className="grade-btn" onClick={() => handleGradeClick(5)}>Grade 5</button>
-                    <button className="grade-btn" onClick={() => handleGradeClick(6)}>Grade 6</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(2)}>{t('grade_two')}</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(3)}>{t('grade_three')}</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(4)}>{t('grade_four')}</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(5)}>{t('grade_five')}</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(6)}>{t('grade_six')}</button>
                 </div>
             </section>
         </main>
