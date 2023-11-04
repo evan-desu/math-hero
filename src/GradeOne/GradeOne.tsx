@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 import './GradeOne.css'
 
 const GradeOne = () => {
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     function handleQuizClick(path: string) {
         navigate(`/${path}`)
@@ -12,9 +14,9 @@ const GradeOne = () => {
         <main className="quiz-selection-container">
             <section className="selection-text">
                 <h2>Welcome to Grade One!</h2>
-                <h2>Select a quiz:</h2>
+                <h2>{t("select_quiz")}</h2>
                 <div className="quiz-button-container">
-                <h3>Counting</h3>
+                <h3>{t("counting")}</h3>
                     <button id="counting-single-item" className="quiz-btn" onClick={() => handleQuizClick("count-single")}>
                         {/* Counting <br className="desktop-break" />(Level 1) */}
                         Single Items
@@ -23,7 +25,7 @@ const GradeOne = () => {
                         {/* Counting <br className="desktop-break" />(Level 2) */}
                         Mixed Items
                     </button>
-                    <h3>Addition</h3>
+                    <h3>{t("addition")}</h3>
                     <button id="addition-to-ten" className="quiz-btn" onClick={() => handleQuizClick("add-to-10")}>
                         {/* Addition <br className="desktop-break" />(Level 1) */}
                         Sum to 10
@@ -40,7 +42,7 @@ const GradeOne = () => {
                         {/* Addition <br className="desktop-break" />(Level 4) */}
                         Add 3 Numbers
                     </button>
-                    <h3>Subtraction</h3>
+                    <h3>{t("subtraction")}</h3>
                     <button id="subtraction-from-ten" className="quiz-btn" onClick={() => handleQuizClick("subtract-under-10")}>
                         {/* Subtraction <br className="desktop-break" />(Level 1) */}
                         Difference Under 10

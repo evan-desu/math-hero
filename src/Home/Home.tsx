@@ -20,7 +20,7 @@ const Home = () => {
                 </h2>
             </section>
             <section className="home-grade-selection">
-                <h2>Select your elementary school grade:</h2>
+                <h2>{t("select_grade")}</h2>
                 <div className="home-button-container">
                     <button className="grade-btn" onClick={() => handleGradeClick(1)}>{t('grade_one')}</button>
                     <button className="grade-btn" onClick={() => handleGradeClick(2)}>{t('grade_two')}</button>
