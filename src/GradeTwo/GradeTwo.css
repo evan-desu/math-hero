@@ -51,6 +51,13 @@
     line-height: 1.3em;
 }
 
+.grade-two-quiz-button-container h3 {
+    /* border: 2px solid red; */
+    width: 18em;
+    text-align: left;
+    margin-bottom: -5px;
+}
+
 button:hover {
     cursor: pointer;
     transform: scale(1.1);
@@ -62,20 +69,51 @@ button:hover {
         align-items: center;
     }
 
-    .grade-two-quiz-button-container {
+    /* Grid Container */
+    /* .grade-two-quiz-button-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
         gap: 1.5rem;
+    } */
+
+    /* Flex Container */
+    .grade-two-quiz-button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        margin-bottom: 100px;
+        gap: 1em
     }
 
-    .grade-two-quiz-btn {
+    .grade-two-quiz-button-container h3 {
+        /* border: 2px solid red; */
+        width: 12em;
+        text-align: left;
+        margin-bottom: -5px;
+    }
+
+    /* fat buttons */
+    /* .grade-two-quiz-btn {
         font-size: 1.2em;
         color: black;
         border: none;
         border-radius: 15px;
         width: 10em;
         height: 4.5em;
+    } */
+
+    /* thin buttons */
+    .grade-two-quiz-btn {
+        font-family: 'Andika', sans-serif;
+        font-size: 1em;
+        color: black;
+        border: none;
+        border-radius: 15px;
+        width: 14em;
+        height: 1.7em;
+        line-height: 1.3em;
     }
 
     /* .desktop-break {
