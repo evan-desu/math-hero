@@ -10,16 +10,26 @@
     font-size: 1.2rem;
 }
 
-.grade-two-quiz-button-container {
-    /* border: 2px solid red; */
+/* Grid Container */
+/* .grade-two-quiz-button-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, max-content));
     gap: 3rem;
     justify-content: center;
     margin-bottom: 100px;
+} */
+
+/* Flex Container */
+.grade-two-quiz-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 100px;
 }
 
-.grade-two-quiz-btn {
+/* fat buttons */
+/* .grade-two-quiz-btn {
     font-family: 'Andika', sans-serif;
     font-size: 1.2em;
     color: black;
@@ -27,6 +37,17 @@
     border-radius: 15px;
     width: 10em;
     height: 3.5em;
+    line-height: 1.3em;
+} */
+
+.grade-two-quiz-btn {
+    font-family: 'Andika', sans-serif;
+    font-size: 1.2em;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    width: 18em;
+    height: 2em;
     line-height: 1.3em;
 }
 

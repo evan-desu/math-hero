@@ -1,8 +1,10 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './GradeTwo.css'
 
 const GradeTwo = () => {
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     function handleQuizClick(path: string) {
         navigate(`/${path}`)
@@ -11,19 +13,26 @@ const GradeTwo = () => {
         <main className="grade-two-quiz-selection-container">
             <section className='grade-two-selection-text'>
                 <h2>Welcome to Grade Two!</h2>
-                <h2>Select a quiz:</h2>
+                <h2>{t("select_quiz")}</h2>
                 <div className='grade-two-quiz-button-container'>
+                    <h3>{t("addition")}</h3>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
-                        Addition <br className="desktop-break" />(Level 1)
+                        {/* Addition <br className="desktop-break" />(Level 1) */}
+                        Sum to 20
                     </button>
+                    <h3>{t("subtraction")}</h3>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("subtract-under-20")}>
-                        Subtraction <br className="desktop-break" />(Level 1)
+                        {/* Subtraction <br className="desktop-break" />(Level 1) */}
+                        Difference Under 20
                     </button>
+                    <h3>{t("comparisons")}</h3>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("compare-numbers-100")}>
-                        Comparisons <br className="desktop-break" />(Level 1)
+                        {/* Comparisons <br className="desktop-break" />(Level 1) */}
+                        Numbers under 100
                     </button>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("compare-numbers-300")}>
-                        Comparisons <br className="desktop-break" />(Level 2)
+                        {/* Comparisons <br className="desktop-break" />(Level 2) */}
+                        Numbers under 300
                     </button>
                 </div>
             </section>

@@ -20,6 +20,7 @@ i18n
           "counting": "Counting",
           "addition": "Addition" ,
           "subtraction": "Subtraction" ,
+          "comparisons": "Comparisons" ,
         }
       },
       ja: {
@@ -35,6 +36,7 @@ i18n
           "counting": "数える",
           "addition": "足し算" ,
           "subtraction": "引き算" ,
+          "comparisons": "比べる" ,
         }
       }
     },
