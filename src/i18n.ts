@@ -9,6 +9,8 @@ i18n
     resources: {
       en: {
         translation: {
+          "home": "Home",
+          "about": "About",
           "select_grade": "Select your elementary school grade:",
           "grade_one": "Grade 1",
           "grade_two": "Grade 2",
@@ -25,6 +27,8 @@ i18n
       },
       ja: {
         translation: {
+          "home": " ホーム",
+          "about": "情報",
           "select_grade": "学年の選択:",
           "grade_one": "一年生",
           "grade_two": "二年生",
@@ -33,10 +37,10 @@ i18n
           "grade_five": "五年生",
           "grade_six": "六年生",
           "select_quiz": "クイズの選択:",
-          "counting": "数える",
+          "counting": "数え方",
           "addition": "足し算" ,
           "subtraction": "引き算" ,
-          "comparisons": "比べる" ,
+          "comparisons": "比較" ,
         }
       }
     },
