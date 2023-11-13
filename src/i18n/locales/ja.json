@@ -6,12 +6,12 @@
         },
         "home": {
             "select_grade": "学年の選択:",
-            "grade_one": "一年生",
-            "grade_two": "二年生",
-            "grade_three": "三年生",
-            "grade_four": "四年生",
-            "grade_five": "五年生",
-            "grade_six": "六年生"
+            "grade_one": "1年生",
+            "grade_two": "2年生",
+            "grade_three": "3年生",
+            "grade_four": "4年生",
+            "grade_five": "5年生",
+            "grade_six": "6年生"
         },
         "gradeOne": {
             "welcome": "小学1年へようこそ!",
