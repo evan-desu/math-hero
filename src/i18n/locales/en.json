@@ -1,0 +1,29 @@
+{  
+    "translation":  {
+        "navbar": {
+            "home": "Home",
+            "about": "About"
+        },
+        "home": {
+            "select_grade": "Select your elementary school grade:",
+            "grade_one": "Grade 1",
+            "grade_two": "Grade 2",
+            "grade_three": "Grade 3",
+            "grade_four": "Grade 4",
+            "grade_five": "Grade 5",
+            "grade_six": "Grade 6"
+        },
+        "gradeOne": {
+            "select_quiz": "Select a quiz:",
+            "counting": "Counting",
+            "addition": "Addition",
+            "subtraction": "Subtraction"
+        },
+        "gradeTwo": {
+            "select_quiz": "Select a quiz:",
+            "addition": "Addition",
+            "subtraction": "Subtraction",
+            "comparisons": "Comparisons"
+        }
+    }
+}

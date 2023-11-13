@@ -20,14 +20,14 @@ const Home = () => {
                 </h2>
             </section>
             <section className="home-grade-selection">
-                <h2>{t("select_grade")}</h2>
+                <h2>{t("home.select_grade")}</h2>
                 <div className="home-button-container">
-                    <button className="grade-btn" onClick={() => handleGradeClick(1)}>{t('grade_one')}</button>
-                    <button className="grade-btn" onClick={() => handleGradeClick(2)}>{t('grade_two')}</button>
-                    <button className="grade-btn" onClick={() => handleGradeClick(3)}>{t('grade_three')}</button>
-                    <button className="grade-btn" onClick={() => handleGradeClick(4)}>{t('grade_four')}</button>
-                    <button className="grade-btn" onClick={() => handleGradeClick(5)}>{t('grade_five')}</button>
-                    <button className="grade-btn" onClick={() => handleGradeClick(6)}>{t('grade_six')}</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(1)}>{t('home.grade_one')}</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(2)}>{t('home.grade_two')}</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(3)}>{t('home.grade_three')}</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(4)}>{t('home.grade_four')}</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(5)}>{t('home.grade_five')}</button>
+                    <button className="grade-btn" onClick={() => handleGradeClick(6)}>{t('home.grade_six')}</button>
                 </div>
             </section>
         </main>

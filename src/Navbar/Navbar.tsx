@@ -18,8 +18,8 @@ const Navbar = () => {
         <nav className="navbar-container">
             <h3 className="navbar-math-hero"onClick={handleHomeClick}>Math Hero</h3>
             <section className="navbar-links">
-                <h3 className="navbar-link" onClick={handleHomeClick}>{t("home")}</h3>
-                <h3 className="navbar-link">{t("about")}</h3>
+            <h3 className="navbar-link" onClick={handleHomeClick}>{t("navbar.home")}</h3>
+                <h3 className="navbar-link">{t("navbar.about")}</h3>
                 <select 
                     id="languages" 
                     className="navbar-link"

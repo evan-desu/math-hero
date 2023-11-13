@@ -1,0 +1,29 @@
+{  
+    "translation":  {
+        "navbar": {
+        "home": " ホーム",
+        "about": "情報"
+        },
+        "home": {
+        "select_grade": "学年の選択:",
+        "grade_one": "一年生",
+        "grade_two": "二年生",
+        "grade_three": "三年生",
+        "grade_four": "四年生",
+        "grade_five": "五年生",
+        "grade_six": "六年生"
+        },
+        "gradeOne": {
+        "select_quiz": "クイズの選択:",
+        "counting": "数え方",
+        "addition": "足し算",
+        "subtraction": "引き算"
+        },
+        "gradeTwo": {
+            "select_quiz": "クイズの選択:",
+            "addition": "足し算",
+            "subtraction": "引き算",
+            "comparisons": "比較"
+        }
+    }
+}
