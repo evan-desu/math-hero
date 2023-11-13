@@ -14,12 +14,14 @@
             "grade_six": "Grade 6"
         },
         "gradeOne": {
+            "welcome": "Welcome to Grade One!",
             "select_quiz": "Select a quiz:",
             "counting": "Counting",
             "addition": "Addition",
             "subtraction": "Subtraction"
         },
         "gradeTwo": {
+            "welcome": "Welcome to Grade Two!",
             "select_quiz": "Select a quiz:",
             "addition": "Addition",
             "subtraction": "Subtraction",

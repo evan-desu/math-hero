@@ -12,7 +12,7 @@ const GradeTwo = () => {
     return (
         <main className="grade-two-quiz-selection-container">
             <section className='grade-two-selection-text'>
-                <h2>Welcome to Grade Two!</h2>
+                <h2>{t("gradeTwo.welcome")}</h2>
                 <h2>{t("gradeTwo.select_quiz")}</h2>
                 <div className='grade-two-quiz-button-container'>
                     <h3>{t("gradeTwo.addition")}</h3>

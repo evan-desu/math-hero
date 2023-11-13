@@ -13,7 +13,7 @@ const GradeOne = () => {
     return (
         <main className="quiz-selection-container">
             <section className="selection-text">
-                <h2>Welcome to Grade One!</h2>
+                <h2>{t("gradeOne.welcome")}</h2>
                 <h2>{t("gradeOne.select_quiz")}</h2>
                 <div className="quiz-button-container">
                 <h3>{t("gradeOne.counting")}</h3>
