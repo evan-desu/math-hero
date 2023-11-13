@@ -14,14 +14,14 @@
             "grade_six": "六年生"
         },
         "gradeOne": {
-            "welcome": "1年へようこそ!",
+            "welcome": "小学1年へようこそ!",
             "select_quiz": "クイズの選択:",
             "counting": "数え方",
             "addition": "足し算",
             "subtraction": "引き算"
         },
         "gradeTwo": {
-            "welcome": "2年へようこそ!",
+            "welcome": "小学2年へようこそ!",
             "select_quiz": "クイズの選択:",
             "addition": "足し算",
             "subtraction": "引き算",
