@@ -17,8 +17,18 @@
             "welcome": "Welcome to Grade One!",
             "select_quiz": "Select a quiz:",
             "counting": "Counting",
+            "single_item": "Single Item",
+            "mixed_items": "Mixed Items",
             "addition": "Addition",
-            "subtraction": "Subtraction"
+            "sum_to_ten": "Sum to 10",
+            "sum_to_twenty": "Sum to 20",
+            "adding_ten": "Adding 10",
+            "add_three_numbers": "Add Three Numbers",
+            "subtraction": "Subtraction",
+            "difference_under_ten": "Difference Under 10",
+            "difference_under_twenty": "Difference Under 20",
+            "subtracting_ten": "Subtracting 10",
+            "subtract_three_numbers": "Subtract Three Numbers"
         },
         "gradeTwo": {
             "welcome": "Welcome to Grade Two!",

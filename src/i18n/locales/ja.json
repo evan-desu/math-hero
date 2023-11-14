@@ -17,8 +17,18 @@
             "welcome": "小学1年へようこそ!",
             "select_quiz": "クイズの選択:",
             "counting": "数え方",
+            "single_item": "単一項目",
+            "mixed_items": "混合項目",
             "addition": "足し算",
-            "subtraction": "引き算"
+            "sum_to_ten": "10まで合計",
+            "sum_to_twenty": "合計が20まで",
+            "adding_ten": "10を足す",
+            "add_three_numbers": "３つの数字を足す",
+            "subtraction": "引き算",
+            "difference_under_ten": "10未満の差",
+            "difference_under_twenty": "20未満の差",
+            "subtracting_ten": "10を引く",
+            "subtract_three_numbers": "３つの数字を引く"
         },
         "gradeTwo": {
             "welcome": "小学2年へようこそ!",
