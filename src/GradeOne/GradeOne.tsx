@@ -18,45 +18,38 @@ const GradeOne = () => {
                 <div className="quiz-button-container">
                 <h3>{t("gradeOne.counting")}</h3>
                     <button id="counting-single-item" className="quiz-btn" onClick={() => handleQuizClick("count-single")}>
-                        {/* Counting <br className="desktop-break" />(Level 1) */}
                         {t("gradeOne.single_item")}
                     </button>
                     <button id="counting-mixed-items" className="quiz-btn" onClick={() => handleQuizClick("count-mixed")}>
-                        {/* Counting <br className="desktop-break" />(Level 2) */}
                         {t("gradeOne.mixed_items")}
                     </button>
                     <h3>{t("gradeOne.addition")}</h3>
                     <button id="addition-to-ten" className="quiz-btn" onClick={() => handleQuizClick("add-to-10")}>
-                        {/* Addition <br className="desktop-break" />(Level 1) */}
                         {t("gradeOne.sum_to_ten")}
                     </button>
                     <button id="addition-to-twenty" className="quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
-                        {/* Addition <br className="desktop-break" />(Level 3) */}
                         {t("gradeOne.sum_to_twenty")}
                     </button>
+                    <button id="addition-by-one" className="quiz-btn" onClick={() => handleQuizClick("add-by-1")}>
+                        {t("gradeOne.adding_one")}
+                    </button>
                     <button id="addition-by-ten" className="quiz-btn" onClick={() => handleQuizClick("add-by-10")}>
-                        {/* Addition <br className="desktop-break" />(Level 2) */}
                         {t("gradeOne.adding_ten")}
                     </button>
                     <button id="addition-three" className="quiz-btn" onClick={() => handleQuizClick("add-three")}>
-                        {/* Addition <br className="desktop-break" />(Level 4) */}
                         {t("gradeOne.add_three_numbers")}
                     </button>
                     <h3>{t("gradeOne.subtraction")}</h3>
                     <button id="subtraction-from-ten" className="quiz-btn" onClick={() => handleQuizClick("subtract-under-10")}>
-                        {/* Subtraction <br className="desktop-break" />(Level 1) */}
                         {t("gradeOne.difference_under_ten")}
                     </button>
                     <button id="subtraction-from-twenty" className="quiz-btn" onClick={() => handleQuizClick("subtract-under-20")}>
-                        {/* Subtraction <br className="desktop-break" />(Level 4) */}
                         {t("gradeOne.difference_under_twenty")}
                     </button>
                     <button id="subtraction-ten" className="quiz-btn" onClick={() => handleQuizClick("subtract-10")}>
-                        {/* Subtraction <br className="desktop-break" />(Level 2) */}
                         {t("gradeOne.subtracting_ten")}
                     </button>
                     <button id="subtraction-three-nums" className="quiz-btn" onClick={() => handleQuizClick("subtract-three")}>
-                        {/* Subtraction <br className="desktop-break" />(Level 3) */}
                         {t("gradeOne.subtract_three_numbers")}
                     </button>
                 </div>

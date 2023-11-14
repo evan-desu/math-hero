@@ -17,21 +17,17 @@ const GradeTwo = () => {
                 <div className='grade-two-quiz-button-container'>
                     <h3>{t("gradeTwo.addition")}</h3>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
-                        {/* Addition <br className="desktop-break" />(Level 1) */}
                         {t("gradeTwo.sum_to_twenty")}
                     </button>
                     <h3>{t("gradeTwo.subtraction")}</h3>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("subtract-under-20")}>
-                        {/* Subtraction <br className="desktop-break" />(Level 1) */}
                         {t("gradeTwo.difference_under_twenty")}
                     </button>
                     <h3>{t("gradeTwo.comparisons")}</h3>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("compare-numbers-100")}>
-                        {/* Comparisons <br className="desktop-break" />(Level 1) */}
                         {t("gradeTwo.compare_under_100")}
                     </button>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("compare-numbers-300")}>
-                        {/* Comparisons <br className="desktop-break" />(Level 2) */}
                         {t("gradeTwo.compare_under_300")}
                     </button>
                 </div>
