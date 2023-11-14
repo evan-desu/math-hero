@@ -3,7 +3,7 @@ import { checkAnswer, generateNumber } from '../../MathFunctions'
 import './AdditionByTen.css'
 
 const AdditionByTen = () => {
-    const [problem, setProblem] = useState({ num1: 10, num2: 0, sum: 0 });
+    const [problem, setProblem] = useState({ num1: 0, num2: 10, sum: 0 });
     const [userAnswer, setUserAnswer] = useState('');
     const [questionNumber, setQuestionNumber] = useState(1);
     const [score, setScore] = useState(0);
@@ -11,8 +11,8 @@ const AdditionByTen = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        const num2 = generateNumber(10);
-        setProblem({ num1: 10, num2: num2, sum: 10 + num2 });
+        const num1 = generateNumber(10);
+        setProblem({ num1: num1, num2: 10, sum: num1 + 10 });
         setIsLoading(false);
     }, []);
 
@@ -25,8 +25,8 @@ const AdditionByTen = () => {
 
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            const num2 = generateNumber(10);
-            setProblem({ num1: 10, num2: num2, sum: 10 + num2 });
+            const num1 = generateNumber(10);
+            setProblem({ num1: num1, num2: 10, sum: num1 + 10 });
         } else {
             setIsFinished(true);
         }
