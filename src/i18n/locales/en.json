@@ -34,8 +34,12 @@
             "welcome": "Welcome to Grade Two!",
             "select_quiz": "Select a quiz:",
             "addition": "Addition",
+            "sum_to_twenty": "Sum to 20",
             "subtraction": "Subtraction",
-            "comparisons": "Comparisons"
+            "difference_under_twenty": "Difference Under 20",
+            "comparisons": "Comparisons",
+            "compare_under_100": "Compare Numbers Under 100",
+            "compare_under_300": "Compare Numbers Under 300"
         }
     }
 }

@@ -34,8 +34,12 @@
             "welcome": "小学2年へようこそ!",
             "select_quiz": "クイズの選択:",
             "addition": "足し算",
+            "sum_to_twenty": "合計が20まで",
             "subtraction": "引き算",
-            "comparisons": "比較"
+            "difference_under_twenty": "20未満の差",
+            "comparisons": "比較",
+            "compare_under_100": "100未満の数字の比較",
+            "compare_under_300": "300未満の数字の比較"
         }
     }
 }
