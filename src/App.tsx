@@ -41,7 +41,7 @@ function App() {
           <Route path='/grade6' element={ <GradeSix /> } />
           <Route path='/add-to-10' element={ <AdditionTen /> }/>
           <Route path='/add-by-10' element={ <AdditionByTen /> }/>
-          <Route path='/add-by-1' element={ <AdditionByOne /> }/>
+          <Route path='/add-by-1-or-2' element={ <AdditionByOne /> }/>
           <Route path='/add-to-20' element={ <AdditionTwenty /> }/>
           <Route path='/add-three' element={ <AdditionOfThree /> }/>
           <Route path='/subtract-under-10' element={ <SubtractionTen /> }/>

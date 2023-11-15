@@ -3,7 +3,7 @@ import { checkAnswer, generateNumber } from "../../MathFunctions";
 import './AdditionByOne.css';
 
 const AdditionByOne = () => {
-    const [problem, setProblem] = useState({ num1: 0, num2: 1, sum: 0 });
+    const [problem, setProblem] = useState({ num1: 0, num2: 0, sum: 0 });
     const [userAnswer, setUserAnswer] = useState("");
     const [questionNumber, setQuestionNumber] = useState(1);
     const [score, setScore] = useState(0);
@@ -11,8 +11,10 @@ const AdditionByOne = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        const num1 = generateNumber(19);
-        setProblem({ num1: num1, num2: 1, sum: num1 + 1 });
+        const num1 = generateNumber(10);
+        const num2Array = [1, 2];
+        const num2 = num2Array[generateNumber(2) - 1]
+        setProblem({ num1: num1, num2: num2, sum: num1 + num2 });
         setIsLoading(false);
     }, []);
 
@@ -25,8 +27,10 @@ const AdditionByOne = () => {
 
         if (questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            const num1 = generateNumber(19);
-            setProblem({ num1: num1, num2: 1, sum: num1 + 1 });
+            const num1 = generateNumber(10);
+            const num2Array = [1, 2];
+            const num2 = num2Array[generateNumber(2) - 1]
+            setProblem({ num1: num1, num2: num2, sum: num1 + num2 });
         } else {
             setIsFinished(true);
         }
