@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { add, checkAnswer } from '../../MathFunctions'
+import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay'
 import './AdditionTen.css'
 
 const AdditionTen = () => {
@@ -51,10 +52,7 @@ const AdditionTen = () => {
                     </form>
                 </section>
             ) : (
-                <section className="add-ten-score-container">
-                    <p className="add-ten-score-text">Your score: </p>
-                    <p className="add-ten-score-result">{score}/10</p>
-                </section>
+                <ScoreDisplay score={score} totalQuestions={10}/>
             )}
         </main>
     );

@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
-import { checkAnswer, generateNumber } from '../../MathFunctions'
-import './AdditionByTen.css'
+import { useState, useEffect } from 'react';
+import { checkAnswer, generateNumber } from '../../MathFunctions';
+import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay';
+import './AdditionByTen.css';
 
 const AdditionByTen = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 10, sum: 0 });
@@ -52,13 +53,10 @@ const AdditionByTen = () => {
                     </form>
                 </section>
             ) : (
-                <section className="add-by-ten-score-container">
-                    <p className="add-by-ten-score-text">Your score: </p>
-                    <p className="add-by-ten-score-result">{score}/10</p>
-                </section>
+                <ScoreDisplay score={score} totalQuestions={10}/>
             )}
         </main>
     );
-}
+};
  
 export default AdditionByTen;

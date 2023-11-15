@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { compareTwoNumbers } from "../../MathFunctions";
-import './CompareNumbersHigh.css'
+import ScoreDisplay from "../../ScoreDisplay/ScoreDisplay";
+import './CompareNumbersHigh.css';
 
 const CompareNumbers300 = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 0, correctAnswer: '' });
@@ -49,10 +50,7 @@ const CompareNumbers300 = () => {
                     </div>
                 </div>
             ) : (
-                <section className="compare-300-score-container">
-                    <p className="compare-300-score-text">Your score: </p>
-                    <p className="compare-300-score-result">{score}/10</p>
-                </section>
+                <ScoreDisplay score={score} totalQuestions={10}/>
             )}
         </main>
     )

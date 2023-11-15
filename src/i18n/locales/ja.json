@@ -29,7 +29,8 @@
             "difference_under_ten": "10未満の差",
             "difference_under_twenty": "20未満の差",
             "subtracting_ten": "10を引く",
-            "subtract_three_numbers": "３つの数字を引く"
+            "subtract_three_numbers": "３つの数字を引く",
+            "submit": "提出する"
         },
         "gradeTwo": {
             "welcome": "小学2年へようこそ!",
@@ -40,7 +41,8 @@
             "difference_under_twenty": "20未満の差",
             "comparisons": "比較",
             "compare_under_100": "100未満の数字の比較",
-            "compare_under_300": "300未満の数字の比較"
+            "compare_under_300": "300未満の数字の比較",
+            "submit": "提出する"
         }
     }
 }

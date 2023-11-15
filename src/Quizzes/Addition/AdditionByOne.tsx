@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { checkAnswer, generateNumber } from "../../MathFunctions";
+import ScoreDisplay from "../../ScoreDisplay/ScoreDisplay";
 import './AdditionByOne.css';
 
 const AdditionByOne = () => {
@@ -9,6 +11,7 @@ const AdditionByOne = () => {
     const [score, setScore] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
     const [isFinished, setIsFinished] = useState(false);
+    const { t } = useTranslation();
 
     useEffect(() => {
         const num1 = generateNumber(10);
@@ -52,14 +55,11 @@ const AdditionByOne = () => {
                             value={userAnswer}
                             onChange={(e) => setUserAnswer(e.target.value)}
                         />
-                        <button type='submit'>Submit</button>
+                        <button type='submit'>{t('gradeOne.submit')}</button>
                     </form>
                 </section>
             ) : (
-                <section className="add-by-one-score-container">
-                    <p className="add-by-one-score-text">Your score: </p>
-                    <p className="add-by-one-score-result">{score}/10</p>
-                </section>
+                <ScoreDisplay score={score} totalQuestions={10}/>
             )}
         </main>
     )

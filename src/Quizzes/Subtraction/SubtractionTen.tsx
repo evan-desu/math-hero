@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { subtract, checkAnswer } from '../../MathFunctions';
+import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay';
 import './SubtractionTen.css'
 
 const SubtractionTen = () => {
@@ -49,10 +50,7 @@ const SubtractionTen = () => {
                     </form>
                 </section>
             ) : (
-                <section className="subtract-ten-score-container">
-                    <p className="subtract-ten-score-text">Your score:</p>
-                    <p className="subtract-ten-score-result">{score}/10</p>
-                </section>
+                <ScoreDisplay score={score} totalQuestions={10}/>
             )}
         </main>
     );

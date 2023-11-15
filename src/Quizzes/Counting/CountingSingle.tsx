@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { generateEmoji, checkAnswer } from '../../MathFunctions';
+import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay';
 import './CountingSingle.css'
 
 const CountingSingle = () => {
@@ -35,7 +36,6 @@ const CountingSingle = () => {
 
     return (
         <main className="counting-single--quiz-container">
-            {/* <h2>Counting Single Items</h2> */}
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
                 <section className="question-container">
@@ -57,10 +57,7 @@ const CountingSingle = () => {
                     </form>
                 </section>
             ) : (
-                <section className="score-container">
-                    <p className="score-text">Your score: </p>
-                    <p className="score-result">{score}/10</p>
-                </section>
+                <ScoreDisplay score={score} totalQuestions={10}/>
             )}
         </main>
     );

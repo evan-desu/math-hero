@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
-import { checkAnswer, generateNumber } from '../../MathFunctions'
-import './SubtractTenFrom.css'
+import { useState, useEffect } from 'react';
+import { checkAnswer, generateNumber } from '../../MathFunctions';
+import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay';
+import './SubtractTenFrom.css';
 
 const SubtractTenFrom = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 10, diff: 0 });
@@ -58,10 +59,7 @@ const SubtractTenFrom = () => {
                     </form>
                 </section>
             ) : (
-                <section className="subtract-ten-from-score-container">
-                    <p className="subtract-ten-from-score-text">Your score: </p>
-                    <p className="subtract-ten-from-score-result">{score}/10</p>
-                </section>
+                <ScoreDisplay score={score} totalQuestions={10}/>
             )}
         </main>
     );

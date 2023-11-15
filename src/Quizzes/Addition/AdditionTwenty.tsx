@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
-import { add, checkAnswer } from '../../MathFunctions'
-import './AdditionTwenty.css'
+import { useState, useEffect } from 'react';
+import { add, checkAnswer } from '../../MathFunctions';
+import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay';
+import './AdditionTwenty.css';
 
 const AdditionTwenty = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 0, sum: 0 });
@@ -50,10 +51,7 @@ const AdditionTwenty = () => {
                     </form>
                 </section>
             ) : (
-                <section className="add-twenty-score-container">
-                    <p className="add-twenty-score-text">Your score: </p>
-                    <p className="add-twenty-score-result">{score}/10</p>
-                </section>
+                <ScoreDisplay score={score} totalQuestions={10}/>
             )}
         </main>
 

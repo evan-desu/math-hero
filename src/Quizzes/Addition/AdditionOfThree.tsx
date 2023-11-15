@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
-import { checkAnswer, addThreeNumbers } from '../../MathFunctions'
-import './AdditionOfThree.css'
+import { useState, useEffect } from 'react';
+import { checkAnswer, addThreeNumbers } from '../../MathFunctions';
+import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay';
+import './AdditionOfThree.css';
 
 const AdditionOfThree = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 0, num3: 0, sum: 0 });
@@ -50,10 +51,7 @@ const AdditionOfThree = () => {
                     </form>
                 </section>
             ) : (
-                <section className="add-three-score-container">
-                    <p className="add-three-score-text">Your score: </p>
-                    <p className="add-three-score-result">{score}/10</p>
-                </section>
+                <ScoreDisplay score={score} totalQuestions={10}/>
             )}
         </main>
     );

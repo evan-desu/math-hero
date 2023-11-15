@@ -29,7 +29,8 @@
             "difference_under_ten": "Difference Under 10",
             "difference_under_twenty": "Difference Under 20",
             "subtracting_ten": "Subtracting 10",
-            "subtract_three_numbers": "Subtract Three Numbers"
+            "subtract_three_numbers": "Subtract Three Numbers",
+            "submit": "Submit"
         },
         "gradeTwo": {
             "welcome": "Welcome to Grade Two!",
@@ -40,7 +41,8 @@
             "difference_under_twenty": "Difference Under 20",
             "comparisons": "Comparisons",
             "compare_under_100": "Compare Numbers Under 100",
-            "compare_under_300": "Compare Numbers Under 300"
+            "compare_under_300": "Compare Numbers Under 300",
+            "submit": "Submit"
         }
     }
 }

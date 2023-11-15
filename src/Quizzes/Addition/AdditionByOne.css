@@ -59,29 +59,6 @@
     border-radius: 15px;
 }
 
-.add-by-one-score-container {
-    margin: 90px 100px 100px 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 120px;
-}
-
-.add-by-one-score-container p {
-    width: 300px;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.add-by-one-score-text {
-    font-size: 40px;
-}
-
-.add-by-one-score-result {
-    font-size: 80px;
-    margin-top: 0;
-}
-
 @media (max-width: 767px) {
     .add-by-one-container {
         margin: 90px 30px;
@@ -109,15 +86,5 @@
         margin-top: 0.5rem;
         width: 16rem;
         height: 3rem;
-    }
-
-    .add-by-one-score-container {
-        /* border: 2px solid red; */
-        margin: 60px 100px 100px 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 120px 20px 120px;
-    }
-    
+    }    
 }

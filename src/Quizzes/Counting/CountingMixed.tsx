@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { mixedCount, checkAnswer } from "../../MathFunctions";
-import './CountingMixed.css'
+import ScoreDisplay from "../../ScoreDisplay/ScoreDisplay";
+import './CountingMixed.css';
 
 const CountingMixed = () => {
     const [problem, setProblem] = useState<{ emojis: { symbol: string; name: string; }[], counts: { [key: string]: number } } | null>(null);
@@ -62,10 +63,7 @@ const CountingMixed = () => {
                     </form>
                 </section>
             ) : (
-                <section className="score-container">
-                    <p className="score-text">Your score: </p>
-                    <p className="score-result">{score}/10</p>
-                </section>
+                <ScoreDisplay score={score} totalQuestions={10}/>
             )}
             
         </main>
