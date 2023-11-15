@@ -40,7 +40,8 @@
 .grade-btn {
     font-family: 'Andika', sans-serif;
     font-size: 1.7em;
-    color: black;
+    background-color: #0F52BA;
+    color: white;
     border: none;
     border-radius: 15px;
     width: 10em;
@@ -86,7 +87,6 @@ button:hover {
     }
 
     .grade-btn {
-        color: black;
         width: 8em;
     }
 }

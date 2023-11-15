@@ -44,7 +44,8 @@
 .quiz-btn {
     font-family: 'Andika', sans-serif;
     font-size: 1.2em;
-    color: black;
+    background-color: #0F52BA;
+    color: white;
     border: none;
     border-radius: 15px;
     width: 18em;
@@ -109,7 +110,6 @@ button:hover {
     .quiz-btn {
         font-family: 'Andika', sans-serif;
         font-size: 1em;
-        color: black;
         border: none;
         border-radius: 15px;
         width: 15em;
