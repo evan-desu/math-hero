@@ -3,7 +3,7 @@ import { checkAnswer, generateNumber } from '../../MathFunctions';
 import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay';
 import './AdditionByThree.css';
 
-const AdditionByTen = () => {
+const AdditionByThree = () => {
     const [problem, setProblem] = useState({ num1: 0, num2: 3, sum: 0 });
     const [userAnswer, setUserAnswer] = useState('');
     const [questionNumber, setQuestionNumber] = useState(1);
@@ -59,4 +59,4 @@ const AdditionByTen = () => {
     );
 };
  
-export default AdditionByTen;
+export default AdditionByThree;
