@@ -46,24 +46,12 @@
     border: 1px solid white;
 }
 
-.language-option[data-lang="en"] {
-    background-image: url('../assets/images/uk_flag.png');
-    background-repeat: none;
-    background-size: 10px 10px;
-    background-position: left center;
-    padding-left: 25px;
-}
-
-.language-option[data-lang="ja"] {
-    background-image: url('../assets/images/ja_flag.png');
-    background-repeat: none;
-    background-size: 10px 10px;
-    background-position: left center;
-    padding-left: 25px;
-}
-
-.navbar-math-hero, .navbar-link:hover {
+.navbar-math-hero, .navbar-link:hover, .language-button {
     cursor: pointer;
+}
+
+.language-button:hover {
+    transform: scale(1.1);
 }
 
 /* Default styles for larger screens (if any) can go outside the media query */
