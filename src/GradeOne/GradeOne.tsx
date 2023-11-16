@@ -30,14 +30,20 @@ const GradeOne = () => {
                     <button id="addition-to-twenty" className="quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
                         {t("gradeOne.sum_to_twenty")}
                     </button>
-                    <button id="addition-by-one" className="quiz-btn" onClick={() => handleQuizClick("add-by-1-or-2")}>
-                        {t("gradeOne.adding_one_or_two")}
+                    <button id="addition-by-one" className="quiz-btn" onClick={() => handleQuizClick("1")}>
+                        {t("gradeOne.adding_one")}
+                    </button>
+                    <button id="addition-by-two" className="quiz-btn" onClick={() => handleQuizClick("2")}>
+                        {t("gradeOne.adding_two")}
                     </button>
                     <button id="addition-by-three" className="quiz-btn" onClick={() => handleQuizClick("3")}>
                         {t("gradeOne.adding_three")}
                     </button>
                     <button id="addition-by-four" className="quiz-btn" onClick={() => handleQuizClick("4")}>
                         {t("gradeOne.adding_four")}
+                    </button>
+                    <button id="addition-by-five" className="quiz-btn" onClick={() => handleQuizClick("5")}>
+                        {t("gradeOne.adding_five")}
                     </button>
                     <button id="addition-by-ten" className="quiz-btn" onClick={() => handleQuizClick("10")}>
                         {t("gradeOne.adding_ten")}

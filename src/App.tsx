@@ -11,7 +11,6 @@ import GradeFive from './GradeFive/GradeFive';
 import GradeSix from './GradeSix/GradeSix';
 import AdditionTen from './Quizzes/Addition/AdditionTen';
 import AddBy from './Quizzes/Addition/AddBy';
-import AdditionByOne from './Quizzes/Addition/AdditionByOne';
 import AdditionTwenty from './Quizzes/Addition/AdditionTwenty';
 import SubtractionTen from './Quizzes/Subtraction/SubtractionTen';
 import SubtractTenFrom from './Quizzes/Subtraction/SubtractTenFrom';
@@ -40,7 +39,6 @@ function App() {
           <Route path='/grade6' element={ <GradeSix /> } />
           <Route path='/add-to-10' element={ <AdditionTen /> }/>
           <Route path='/add-by/:addend' element={ <AddBy />} />
-          <Route path='/add-by-1-or-2' element={ <AdditionByOne /> }/>
           <Route path='/add-to-20' element={ <AdditionTwenty /> }/>
           <Route path='/add-three' element={ <AdditionOfThree /> }/>
           <Route path='/subtract-under-10' element={ <SubtractionTen /> }/>
