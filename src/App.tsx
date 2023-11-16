@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 
@@ -11,9 +10,8 @@ import GradeFour from './GradeFour/GradeFour';
 import GradeFive from './GradeFive/GradeFive';
 import GradeSix from './GradeSix/GradeSix';
 import AdditionTen from './Quizzes/Addition/AdditionTen';
+import AddBy from './Quizzes/Addition/AddBy';
 import AdditionByOne from './Quizzes/Addition/AdditionByOne';
-import AdditionByThree from './Quizzes/Addition/AdditionByThree';
-import AdditionByTen from './Quizzes/Addition/AdditionByTen';
 import AdditionTwenty from './Quizzes/Addition/AdditionTwenty';
 import SubtractionTen from './Quizzes/Subtraction/SubtractionTen';
 import SubtractTenFrom from './Quizzes/Subtraction/SubtractTenFrom';
@@ -41,9 +39,8 @@ function App() {
           <Route path='/grade5' element={ <GradeFive /> } />
           <Route path='/grade6' element={ <GradeSix /> } />
           <Route path='/add-to-10' element={ <AdditionTen /> }/>
-          <Route path='/add-by-10' element={ <AdditionByTen /> }/>
+          <Route path='/add-by/:addend' element={ <AddBy />} />
           <Route path='/add-by-1-or-2' element={ <AdditionByOne /> }/>
-          <Route path='/add-by-3' element={ <AdditionByThree /> }/>
           <Route path='/add-to-20' element={ <AdditionTwenty /> }/>
           <Route path='/add-three' element={ <AdditionOfThree /> }/>
           <Route path='/subtract-under-10' element={ <SubtractionTen /> }/>

@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
-import './GradeOne.css'
+import './GradeOne.css';
 
 const GradeOne = () => {
     const navigate = useNavigate();
     const { t } = useTranslation();
 
-    function handleQuizClick(path: string) {
-        navigate(`/${path}`)
+    function handleQuizClick(addend: string) {
+        navigate(`/add-by/${addend}`);
     }
 
     return (
@@ -33,10 +33,10 @@ const GradeOne = () => {
                     <button id="addition-by-one" className="quiz-btn" onClick={() => handleQuizClick("add-by-1-or-2")}>
                         {t("gradeOne.adding_one_or_two")}
                     </button>
-                    <button id="addition-by-three" className="quiz-btn" onClick={() => handleQuizClick("add-by-3")}>
+                    <button id="addition-by-three" className="quiz-btn" onClick={() => handleQuizClick("3")}>
                         {t("gradeOne.adding_three")}
                     </button>
-                    <button id="addition-by-ten" className="quiz-btn" onClick={() => handleQuizClick("add-by-10")}>
+                    <button id="addition-by-ten" className="quiz-btn" onClick={() => handleQuizClick("10")}>
                         {t("gradeOne.adding_ten")}
                     </button>
                     <button id="addition-three" className="quiz-btn" onClick={() => handleQuizClick("add-three")}>

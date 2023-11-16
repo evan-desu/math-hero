@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { checkAnswer, generateNumber } from '../../MathFunctions';
 import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay';
-import './AdditionByTen.css';
+import './AddBy.css';
 
-const AdditionByTen = () => {
-    const [problem, setProblem] = useState({ num1: 0, num2: 10, sum: 0 });
+const AddBy = () => {
+    const { addend } = useParams<{ addend: string }>();
+    const addendNum = parseInt(addend ?? 'O', 10);
+
+    const [problem, setProblem] = useState({ num1: 0, num2: addendNum, sum: 0 });
     const [userAnswer, setUserAnswer] = useState('');
     const [questionNumber, setQuestionNumber] = useState(1);
     const [score, setScore] = useState(0);
@@ -13,9 +17,9 @@ const AdditionByTen = () => {
 
     useEffect(() => {
         const num1 = generateNumber(10);
-        setProblem({ num1: num1, num2: 10, sum: num1 + 10 });
+        setProblem({ num1: num1, num2: addendNum, sum: num1 + addendNum });
         setIsLoading(false);
-    }, []);
+    }, [addend]);
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
@@ -27,7 +31,7 @@ const AdditionByTen = () => {
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
             const num1 = generateNumber(10);
-            setProblem({ num1: num1, num2: 10, sum: num1 + 10 });
+            setProblem({ num1: num1, num2: addendNum, sum: num1 + addendNum });
         } else {
             setIsFinished(true);
         }
@@ -36,12 +40,12 @@ const AdditionByTen = () => {
     }
 
     return (
-        <main className="add-by-ten-container">
+        <main className={`add-by-container add-by-${addend}-container`}>
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
-                <section className="add-by-ten-question-container">
-                    <p className="add-by-ten-question-number">Question {questionNumber}</p>
-                    <p className="add-by-ten-problem-text">{problem.num1} + {problem.num2}</p>
+                <section className="add-by-question-container">
+                    <p className="add-by-question-number">Question {questionNumber}</p>
+                    <p className="add-by-problem-text">{problem.num1} + {problem.num2}</p>
                     <form onSubmit={handleSubmit}>
                         <input
                             type='number'
@@ -59,4 +63,4 @@ const AdditionByTen = () => {
     );
 };
  
-export default AdditionByTen;
+export default AddBy;
