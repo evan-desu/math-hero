@@ -12,10 +12,6 @@ const Navbar = () => {
         navigate('/');
     };
 
-    // function handleLanguageChange(event: React.ChangeEvent<HTMLSelectElement>) {
-    //     i18n.changeLanguage(event.target.value);
-    // }
-
     function handleLanguageChange(lang: any) {
         i18n.changeLanguage(lang);
     }

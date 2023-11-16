@@ -46,11 +46,8 @@
     border: 1px solid white;
 }
 
-.navbar-math-hero, .navbar-link:hover, .language-button {
+.navbar-math-hero, .navbar-link:hover, .language-button:hover {
     cursor: pointer;
-}
-
-.language-button:hover {
     transform: scale(1.1);
 }
 
