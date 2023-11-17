@@ -6,8 +6,12 @@ const GradeOne = () => {
     const navigate = useNavigate();
     const { t } = useTranslation();
 
-    function handleQuizClick(addend: string) {
+    function handleAddByQuizClick(addend: string) {
         navigate(`/add-by/${addend}`);
+    }
+    
+    function handleQuizClick(path: string) {
+        navigate(`/${path}`);
     }
 
     return (
@@ -30,22 +34,22 @@ const GradeOne = () => {
                     <button id="addition-to-twenty" className="quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
                         {t("gradeOne.sum_to_twenty")}
                     </button>
-                    <button id="addition-by-one" className="quiz-btn" onClick={() => handleQuizClick("1")}>
+                    <button id="addition-by-one" className="quiz-btn" onClick={() => handleAddByQuizClick("1")}>
                         {t("gradeOne.adding_one")}
                     </button>
-                    <button id="addition-by-two" className="quiz-btn" onClick={() => handleQuizClick("2")}>
+                    <button id="addition-by-two" className="quiz-btn" onClick={() => handleAddByQuizClick("2")}>
                         {t("gradeOne.adding_two")}
                     </button>
-                    <button id="addition-by-three" className="quiz-btn" onClick={() => handleQuizClick("3")}>
+                    <button id="addition-by-three" className="quiz-btn" onClick={() => handleAddByQuizClick("3")}>
                         {t("gradeOne.adding_three")}
                     </button>
-                    <button id="addition-by-four" className="quiz-btn" onClick={() => handleQuizClick("4")}>
+                    <button id="addition-by-four" className="quiz-btn" onClick={() => handleAddByQuizClick("4")}>
                         {t("gradeOne.adding_four")}
                     </button>
-                    <button id="addition-by-five" className="quiz-btn" onClick={() => handleQuizClick("5")}>
+                    <button id="addition-by-five" className="quiz-btn" onClick={() => handleAddByQuizClick("5")}>
                         {t("gradeOne.adding_five")}
                     </button>
-                    <button id="addition-by-ten" className="quiz-btn" onClick={() => handleQuizClick("10")}>
+                    <button id="addition-by-ten" className="quiz-btn" onClick={() => handleAddByQuizClick("10")}>
                         {t("gradeOne.adding_ten")}
                     </button>
                     <button id="addition-three" className="quiz-btn" onClick={() => handleQuizClick("add-three")}>
