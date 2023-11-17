@@ -11,7 +11,7 @@ export function generateNumber(limit: number = 10) {
 }
 
 // Generates a random emoji with an count of 1 - 10
-export function generateEmoji(t: TFunction, limit: number = 10) {
+export function generateEmoji() {
     const emojis = {
         circle: '🟢', 
         heart: '💙', 
@@ -29,10 +29,9 @@ export function generateEmoji(t: TFunction, limit: number = 10) {
     let emojiArray = Object.values(emojis);
     let emojiNameArray = Object.keys(emojis);
     let index = generateNumber(emojiArray.length) - 1;
-    let count = generateNumber(limit);
+    let count = generateNumber(10);
     let emoji = emojiArray[index];
-    let emojiNameKey = emojiNameArray[index];
-    let emojiName = t(`emojiNames.${emojiNameKey}`);
+    let emojiName = emojiNameArray[index];
 
     return { emoji, emojiName, count };
 };

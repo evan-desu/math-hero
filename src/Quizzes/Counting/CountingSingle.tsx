@@ -15,7 +15,7 @@ const CountingSingle = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        let newProblem = generateEmoji(t);
+        let newProblem = generateEmoji();
         setProblem(newProblem);
         setIsLoading(false);
     }, [])
@@ -29,7 +29,7 @@ const CountingSingle = () => {
 
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            let newProblem = generateEmoji(t);
+            let newProblem = generateEmoji();
             setProblem(newProblem);
         } else {
             setIsFinished(true);
@@ -43,7 +43,7 @@ const CountingSingle = () => {
             {!isFinished ? (
                 <section className="question-container">
                     <p className="question-number">{t("quizText.question")} {questionNumber}</p>
-                    <p className="question-text">{t("quizText.counting", {emojiName: problem.emojiName, emoji: problem.emoji})}</p>
+                    <p className="question-text"> {t("quizText.counting", { emojiName: t(`emojiNames.${problem.emojiName}`), emoji: problem.emoji })}</p>
                     <div className="counting-items">
                         {Array.from({ length: problem.count }).map((_, i) => (
                             <span key={i}>{problem.emoji}</span>
