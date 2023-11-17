@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { mixedCount, checkAnswer } from "../../MathFunctions";
 import ScoreDisplay from "../../ScoreDisplay/ScoreDisplay";
 import './CountingMixed.css';
 
 const CountingMixed = () => {
+    const { t } = useTranslation();
+
     const [problem, setProblem] = useState<{ emojis: { symbol: string; name: string; }[], counts: { [key: string]: number } } | null>(null);
     const [problems, setProblems] = useState<{ emojis: {symbol: string; name: string; }[], counts: { [key: string]: number } }[]>([]);
     const [currentQuestion, setCurrentQuestion] = useState <{ symbol: string; name: string } | null>(null);
@@ -14,7 +17,7 @@ const CountingMixed = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        let newProblems = Array.from({length: 20}, () => mixedCount(4, 10, 15));
+        let newProblems = Array.from({length: 20}, () => mixedCount(t, 4, 10, 15));
         setProblems(newProblems);
         let randomProblem = newProblems[Math.floor(Math.random() * newProblems.length)];
         setProblem(randomProblem);
@@ -46,8 +49,8 @@ const CountingMixed = () => {
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
                 <section className="question-container-mixed">
-                    <p className="question-number-mixed">Question {questionNumber}</p>
-                    <p className="question-text-mixed">How many {currentQuestion?.name} {currentQuestion?.symbol} are there?</p>
+                    <p className="question-number-mixed">{t("quizText.question")} {questionNumber}</p>
+                    <p className="question-text-mixed">{t("quizText.counting", {emojiName: currentQuestion?.name, emoji:currentQuestion?.symbol})}</p>
                     <div className="counting-items-mixed">
                         {problem && problem.emojis.map((emoji, index) => (
                             <span key={index}>{emoji.symbol}</span>
@@ -59,7 +62,7 @@ const CountingMixed = () => {
                             value={userAnswer}
                             onChange={(e) => setUserAnswer(e.target.value)}
                         />
-                        <button type='submit'>Submit</button>
+                        <button type='submit'>{t("quizText.submit")}</button>
                     </form>
                 </section>
             ) : (

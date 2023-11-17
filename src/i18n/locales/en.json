@@ -13,6 +13,27 @@
             "grade_five": "Grade 5",
             "grade_six": "Grade 6"
         },
+        "quizText": {
+            "question": "Question",
+            "submit": "Submit",
+            "counting": "How many {{emojiName}} {{emoji}} are there?"
+        },
+        "emojiNames": {
+            "circle": "circles",
+            "heart": "hearts",
+            "unicorn": "unicorns",
+            "baseball": "baseballs",
+            "rocket": "rockets",
+            "car": "cars",
+            "rabbit": "rabbits",
+            "ghost": "ghosts",
+            "dolphin": "dolphins",
+            "flower": "flowers",
+            "cookie": "cookies"
+        },
+        "scoreDisplay": {
+            "your_score": "Your score:"
+        },
         "gradeOne": {
             "welcome": "Welcome to Grade One!",
             "select_quiz": "Select a quiz:",

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { checkAnswer, generateNumber } from '../../MathFunctions';
 import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay';
 import './AddBy.css';
@@ -7,6 +8,7 @@ import './AddBy.css';
 const AddBy = () => {
     const { addend } = useParams<{ addend: string }>();
     const addendNum = parseInt(addend ?? 'O', 10);
+    const { t } = useTranslation();
 
     const [problem, setProblem] = useState({ num1: 0, num2: addendNum, sum: 0 });
     const [userAnswer, setUserAnswer] = useState('');
@@ -44,7 +46,7 @@ const AddBy = () => {
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
                 <section className="add-by-question-container">
-                    <p className="add-by-question-number">Question {questionNumber}</p>
+                    <p className="add-by-question-number">{t("quizText.question")} {questionNumber}</p>
                     <p className="add-by-problem-text">{problem.num1} + {problem.num2}</p>
                     <form onSubmit={handleSubmit}>
                         <input
@@ -53,7 +55,7 @@ const AddBy = () => {
                             value={userAnswer}
                             onChange={(e) => setUserAnswer(e.target.value)}
                         />
-                        <button type='submit'>Submit</button>
+                        <button type='submit'>{t("quizText.submit")}</button>
                     </form>
                 </section>
             ) : (

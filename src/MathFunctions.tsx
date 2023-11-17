@@ -1,3 +1,5 @@
+import { TFunction } from 'i18next';
+
 // Checks is user answer matches correct answer
 export function checkAnswer(correctAnswer: number, userAnswer: number) {
     return userAnswer === correctAnswer;
@@ -9,19 +11,19 @@ export function generateNumber(limit: number = 10) {
 }
 
 // Generates a random emoji with an count of 1 - 10
-export function generateEmoji(limit: number = 10) {
+export function generateEmoji(t: TFunction, limit: number = 10) {
     const emojis = {
-        circles: '🟢', 
-        hearts: '💙', 
-        unicorns: '🦄', 
-        baseballs: '⚾', 
-        rockets: '🚀',
-        cars: '🚗',
-        rabbits: '🐰',
-        ghosts: '👻',
-        dolphins: '🐬',
-        flowers: '🌼',
-        cookies: '🍪',
+        circle: '🟢', 
+        heart: '💙', 
+        unicorn: '🦄', 
+        baseball: '⚾', 
+        rocket: '🚀',
+        car: '🚗',
+        rabbit: '🐰',
+        ghost: '👻',
+        dolphin: '🐬',
+        flower: '🌼',
+        cookie: '🍪',
     };
 
     let emojiArray = Object.values(emojis);
@@ -29,29 +31,34 @@ export function generateEmoji(limit: number = 10) {
     let index = generateNumber(emojiArray.length) - 1;
     let count = generateNumber(limit);
     let emoji = emojiArray[index];
-    let emojiName = emojiNameArray[index];
+    let emojiNameKey = emojiNameArray[index];
+    let emojiName = t(`emojiNames.${emojiNameKey}`);
 
     return { emoji, emojiName, count };
 };
 
+
 // Generates an array of mixed emojis
-export function mixedCount(items: number, singleLimit: number, totalLimit: number):
+export function mixedCount(t: TFunction, items: number, singleLimit: number, totalLimit: number):
     { emojis: { symbol: string; name: string; }[], counts: { [key: string]: number } } {
     const emojis = {
-        circles: '🟢', 
-        hearts: '💙', 
-        unicorns: '🦄', 
-        baseballs: '⚾', 
-        rockets: '🚀',
-        cars: '🚗',
-        rabbits: '🐰',
-        ghosts: '👻',
-        dolphins: '🐬',
-        flowers: '🌼',
-        cookies: '🍪',
+        circle: '🟢',
+        heart: '💙',
+        unicorn: '🦄', 
+        baseball: '⚾', 
+        rocket: '🚀',
+        car: '🚗',
+        rabbit: '🐰',
+        ghost: '👻',
+        dolphin: '🐬',
+        flower: '🌼',
+        cookie: '🍪',
     };
 
-    let emojiArray = Object.entries(emojis).map(([name, symbol]) => ({ name, symbol }));
+    let emojiArray = Object.entries(emojis).map(([name, symbol]) => ({
+        name: t(`emojiNames.${name}`), 
+        symbol 
+    }));
     let selectedEmojis: { symbol: string; name: string }[] = [];
 
     for (let i = 0; i < items; i++) {

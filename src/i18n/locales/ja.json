@@ -13,6 +13,27 @@
             "grade_five": "5年生",
             "grade_six": "6年生"
         },
+        "quizText": {
+            "question": "質問",
+            "submit": "提出する",
+            "counting": "{{emojiName}}{{emoji}}はいくつありますか?"
+        },
+        "emojiNames": {
+            "circle": "サークルの",
+            "heart": "ハートの",
+            "unicorn": "ユニコーンの",
+            "baseball": "野球ボールの",
+            "rocket": "ロケットの",
+            "car": "車の",
+            "rabbit": "うさぎの",
+            "ghost": "おばけの",
+            "dolphin": "いるかの",
+            "flower": "花の",
+            "cookie": "クッキーの"
+        },
+        "scoreDisplay": {
+            "your_score": "あなたのスコア:"
+        },
         "gradeOne": {
             "welcome": "小学1年へようこそ!",
             "select_quiz": "クイズの選択:",

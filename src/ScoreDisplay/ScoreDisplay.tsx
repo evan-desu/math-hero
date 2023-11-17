@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import "./ScoreDisplay.css"
 
 type ScoreDisplayProps = {
@@ -6,9 +7,10 @@ type ScoreDisplayProps = {
 };
 
 const ScoreDisplay = ({ score, totalQuestions }: ScoreDisplayProps) => {
+    const { t } = useTranslation();
     return (
         <section className="score-container">
-            <p className="score-text">Your score:</p>
+            <p className="score-text">{t("scoreDisplay.your_score")}</p>
             <p className="score-result">{score}/{totalQuestions}</p>
         </section>
     );

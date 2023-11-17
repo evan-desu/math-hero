@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { generateEmoji, checkAnswer } from '../../MathFunctions';
 import ScoreDisplay from '../../ScoreDisplay/ScoreDisplay';
 import './CountingSingle.css'
 
 const CountingSingle = () => {
+    const { t } = useTranslation();
+
     const [problem, setProblem] = useState({ emoji: '', emojiName: '', count: 0 });
     const [questionNumber, setQuestionNumber] = useState(1);
     const [userAnswer, setUserAnswer] = useState('');
@@ -12,7 +15,7 @@ const CountingSingle = () => {
     const [isFinished, setIsFinished] = useState(false);
 
     useEffect(() => {
-        let newProblem = generateEmoji();
+        let newProblem = generateEmoji(t);
         setProblem(newProblem);
         setIsLoading(false);
     }, [])
@@ -26,7 +29,7 @@ const CountingSingle = () => {
 
         if(questionNumber < 10) {
             setQuestionNumber(questionNumber + 1);
-            let newProblem = generateEmoji();
+            let newProblem = generateEmoji(t);
             setProblem(newProblem);
         } else {
             setIsFinished(true);
@@ -39,8 +42,8 @@ const CountingSingle = () => {
             {isLoading && <p>Loading...</p>}
             {!isFinished ? (
                 <section className="question-container">
-                    <p className="question-number">Question {questionNumber}</p>
-                    <p className="question-text">How many {problem.emojiName} {problem.emoji} are there?</p>
+                    <p className="question-number">{t("quizText.question")} {questionNumber}</p>
+                    <p className="question-text">{t("quizText.counting", {emojiName: problem.emojiName, emoji: problem.emoji})}</p>
                     <div className="counting-items">
                         {Array.from({ length: problem.count }).map((_, i) => (
                             <span key={i}>{problem.emoji}</span>
@@ -53,7 +56,7 @@ const CountingSingle = () => {
                             value={userAnswer}
                             onChange={(e) => setUserAnswer(e.target.value)}
                         />
-                        <button type='submit'>Submit</button>
+                        <button type='submit'>{t("quizText.submit")}</button>
                     </form>
                 </section>
             ) : (
