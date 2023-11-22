@@ -36,9 +36,8 @@ export function generateEmoji() {
     return { emoji, emojiName, count };
 };
 
-
 // Generates an array of mixed emojis
-export function mixedCount(t: TFunction, items: number, singleLimit: number, totalLimit: number):
+export function mixedCount(items: number, singleLimit: number, totalLimit: number):
     { emojis: { symbol: string; name: string; }[], counts: { [key: string]: number } } {
     const emojis = {
         circle: '🟢',
@@ -55,7 +54,7 @@ export function mixedCount(t: TFunction, items: number, singleLimit: number, tot
     };
 
     let emojiArray = Object.entries(emojis).map(([name, symbol]) => ({
-        name: t(`emojiNames.${name}`), 
+        name, 
         symbol 
     }));
     let selectedEmojis: { symbol: string; name: string }[] = [];

@@ -65,8 +65,8 @@
             "subtraction": "Subtraction",
             "difference_under_twenty": "Difference Under 20",
             "comparisons": "Comparisons",
-            "compare_under_100": "Compare Numbers Under 100",
-            "compare_under_300": "Compare Numbers Under 300",
+            "compare_under_100": "Numbers Under 100",
+            "compare_under_300": "Numbers Under 300",
             "submit": "Submit"
         }
     }
