@@ -67,6 +67,12 @@
             "comparisons": "Comparisons",
             "compare_under_100": "Numbers Under 100",
             "compare_under_300": "Numbers Under 300",
+            "multiplication": "Multiplication",
+            "multiply_by_one": "Multiply By 1",
+            "multiply_by_two": "Multiply By 2",
+            "multiply_by_three": "Multiply By 3",
+            "multiply_by_four": "Multiply By 4",
+            "multiply_by_five": "Multiply By 5",
             "submit": "Submit"
         }
     }

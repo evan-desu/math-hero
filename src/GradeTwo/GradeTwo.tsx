@@ -9,6 +9,11 @@ const GradeTwo = () => {
     function handleQuizClick(path: string) {
         navigate(`/${path}`)
     }
+
+    function handleMultiplyByQuizClick(multiplier: string) {
+        navigate(`/multiply-by/${multiplier}`);
+    }
+
     return (
         <main className="grade-two-quiz-selection-container">
             <section className='grade-two-selection-text'>
@@ -29,6 +34,22 @@ const GradeTwo = () => {
                     </button>
                     <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("compare-numbers-300")}>
                         {t("gradeTwo.compare_under_300")}
+                    </button>
+                    <h3>{t("gradeTwo.multiplication")}</h3>
+                    <button id="multiply-by-one" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("1")}>
+                        {t("gradeTwo.multiply_by_one")}
+                    </button>
+                    <button id="multiply-by-two" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("2")}>
+                        {t("gradeTwo.multiply_by_two")}
+                    </button>
+                    <button id="multiply-by-three" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("3")}>
+                        {t("gradeTwo.multiply_by_three")}
+                    </button>
+                    <button id="multiply-by-four" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("4")}>
+                        {t("gradeTwo.multiply_by_four")}
+                    </button>
+                    <button id="multiply-by-five" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("5")}>
+                        {t("gradeTwo.multiply_by_five")}
                     </button>
                 </div>
             </section>

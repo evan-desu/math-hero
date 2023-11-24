@@ -26,7 +26,7 @@ const AddBy = () => {
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
-        if (checkAnswer(parseInt(userAnswer), problem.sum)) {
+        if(checkAnswer(parseInt(userAnswer), problem.sum)) {
             setScore(score + 1);
         }
 

@@ -67,6 +67,12 @@
             "comparisons": "比較",
             "compare_under_100": "100未満の数字の比較",
             "compare_under_300": "300未満の数字の比較",
+            "multiplication": "掛け算",
+            "multiply_by_one": "1の段",
+            "multiply_by_two": "2の段",
+            "multiply_by_three": "3の段",
+            "multiply_by_four": "4の段",
+            "multiply_by_five": "5の段",
             "submit": "提出する"
         }
     }
