@@ -10,6 +10,10 @@ const GradeTwo = () => {
         navigate(`/${path}`)
     }
 
+    function handleAddClick(sumLimit: string) {
+        navigate(`/add-to/${sumLimit}`);
+    }
+
     function handleMultiplyByQuizClick(multiplier: string) {
         navigate(`/multiply-by/${multiplier}`);
     }
@@ -21,7 +25,7 @@ const GradeTwo = () => {
                 <h2>{t("gradeTwo.select_quiz")}</h2>
                 <div className='grade-two-quiz-button-container'>
                     <h3>{t("gradeTwo.addition")}</h3>
-                    <button className="grade-two-quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
+                    <button className="grade-two-quiz-btn" onClick={() => handleAddClick("20")}>
                         {t("gradeTwo.sum_to_twenty")}
                     </button>
                     <h3>{t("gradeTwo.subtraction")}</h3>

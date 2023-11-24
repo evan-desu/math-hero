@@ -6,6 +6,10 @@ const GradeOne = () => {
     const navigate = useNavigate();
     const { t } = useTranslation();
 
+    function handleAddClick(sumLimit: string) {
+        navigate(`/add-to/${sumLimit}`);
+    }
+
     function handleAddByQuizClick(addend: string) {
         navigate(`/add-by/${addend}`);
     }
@@ -28,10 +32,10 @@ const GradeOne = () => {
                         {t("gradeOne.mixed_items")}
                     </button>
                     <h3>{t("gradeOne.addition")}</h3>
-                    <button id="addition-to-ten" className="quiz-btn" onClick={() => handleQuizClick("add-to-10")}>
+                    <button id="addition-to-ten" className="quiz-btn" onClick={() => handleAddClick("10")}>
                         {t("gradeOne.sum_to_ten")}
                     </button>
-                    <button id="addition-to-twenty" className="quiz-btn" onClick={() => handleQuizClick("add-to-20")}>
+                    <button id="addition-to-twenty" className="quiz-btn" onClick={() => handleAddClick("20")}>
                         {t("gradeOne.sum_to_twenty")}
                     </button>
                     <button id="addition-by-one" className="quiz-btn" onClick={() => handleAddByQuizClick("1")}>

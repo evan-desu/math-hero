@@ -9,9 +9,7 @@ import GradeThree from './GradeThree/GradeThree';
 import GradeFour from './GradeFour/GradeFour';
 import GradeFive from './GradeFive/GradeFive';
 import GradeSix from './GradeSix/GradeSix';
-import AdditionTen from './Quizzes/Addition/AdditionTen';
 import AddBy from './Quizzes/Addition/AddBy';
-import AdditionTwenty from './Quizzes/Addition/AdditionTwenty';
 import SubtractionTen from './Quizzes/Subtraction/SubtractionTen';
 import SubtractTenFrom from './Quizzes/Subtraction/SubtractTenFrom';
 import SubtractionTwenty from './Quizzes/Subtraction/SubtractionTwenty';
@@ -22,6 +20,7 @@ import CompareNumbers300 from './Quizzes/Comparisons/CompareNumbersHigh';
 import AdditionOfThree from './Quizzes/Addition/AdditionOfThree';
 import SubtractionOfThree from './Quizzes/Subtraction/SubtractionOfThree';
 import MultiplyBy from './Quizzes/Multiplication/MultiplyBy';
+import Add from './Quizzes/Addition/Add';
 
 function App() {
 
@@ -38,9 +37,8 @@ function App() {
           <Route path='/grade4' element={ <GradeFour /> } />
           <Route path='/grade5' element={ <GradeFive /> } />
           <Route path='/grade6' element={ <GradeSix /> } />
-          <Route path='/add-to-10' element={ <AdditionTen /> }/>
+          <Route path='add-to/:sumLimit' element={ <Add />}/>
           <Route path='/add-by/:addend' element={ <AddBy />} />
-          <Route path='/add-to-20' element={ <AdditionTwenty /> }/>
           <Route path='/add-three' element={ <AdditionOfThree /> }/>
           <Route path='/subtract-under-10' element={ <SubtractionTen /> }/>
           <Route path='/subtract-10' element={ <SubtractTenFrom /> }/>
