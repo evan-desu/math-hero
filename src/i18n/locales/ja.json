@@ -19,17 +19,17 @@
             "counting": "{{emojiName}}{{emoji}}はいくつありますか?"
         },
         "emojiNames": {
-            "circle": "サークルの",
-            "heart": "ハートの",
-            "unicorn": "ユニコーンの",
-            "baseball": "野球ボールの",
-            "rocket": "ロケットの",
-            "car": "車の",
-            "rabbit": "うさぎの",
-            "ghost": "おばけの",
-            "dolphin": "いるかの",
-            "flower": "花の",
-            "cookie": "クッキーの"
+            "circle": "サークル",
+            "heart": "ハート",
+            "unicorn": "ユニコーン",
+            "baseball": "野球ボール",
+            "rocket": "ロケット",
+            "car": "車",
+            "rabbit": "うさぎ",
+            "ghost": "おばけ",
+            "dolphin": "いるか",
+            "flower": "花",
+            "cookie": "クッキー"
         },
         "scoreDisplay": {
             "your_score": "あなたのスコア:"
@@ -41,7 +41,7 @@
             "single_item": "単一項目",
             "mixed_items": "混合項目",
             "addition": "足し算",
-            "sum_to_ten": "10まで合計",
+            "sum_to_ten": "合計が10まで",
             "sum_to_twenty": "合計が20まで",
             "adding_one": "1を足す",
             "adding_two": "2を足す",

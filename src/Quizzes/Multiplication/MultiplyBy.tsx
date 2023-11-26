@@ -55,6 +55,7 @@ const MultiplyBy = () => {
                             value={userAnswer}
                             onChange={(e) => setUserAnswer(e.target.value)}
                         />
+                        <button type='submit'>{t("quizText.submit")}</button>
                     </form>
                 </section>
             ) : (

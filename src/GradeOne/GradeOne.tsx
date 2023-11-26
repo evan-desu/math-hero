@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import addition_hero from "../assets/images/addition_hero.png";
 import './GradeOne.css';
 
 const GradeOne = () => {
@@ -31,7 +32,14 @@ const GradeOne = () => {
                     <button id="counting-mixed-items" className="quiz-btn" onClick={() => handleQuizClick("count-mixed")}>
                         {t("gradeOne.mixed_items")}
                     </button>
-                    <h3>{t("gradeOne.addition")}</h3>
+                    <h3>
+                        {t("gradeOne.addition")} 
+                        <img 
+                            src={addition_hero}
+                            alt="Addition Character"
+                            height="25"
+                        />
+                    </h3>
                     <button id="addition-to-ten" className="quiz-btn" onClick={() => handleAddClick("10")}>
                         {t("gradeOne.sum_to_ten")}
                     </button>
