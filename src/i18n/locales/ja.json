@@ -73,11 +73,11 @@
             "multiply_by_three": "3の段",
             "multiply_by_four": "4の段",
             "multiply_by_five": "5の段",
-            "multiply_by_6": "6の段",
-            "multiply_by_7": "7の段",
-            "multiply_by_8": "8の段",
-            "multiply_by_9": "9の段",
-            "multiply_by_10": "10の段",
+            "multiply_by_six": "6の段",
+            "multiply_by_seven": "7の段",
+            "multiply_by_eight": "8の段",
+            "multiply_by_nine": "9の段",
+            "multiply_by_ten": "10の段",
             "submit": "提出する"
         }
     }
