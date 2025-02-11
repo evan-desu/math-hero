@@ -55,6 +55,21 @@ const GradeTwo = () => {
                     <button id="multiply-by-five" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("5")}>
                         {t("gradeTwo.multiply_by_five")}
                     </button>
+                    <button id="multiply-by-six" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("6")}>
+                        {t("gradeTwo.multiply_by_six")}
+                    </button>
+                    <button id="multiply-by-seven" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("7")}>
+                        {t("gradeTwo.multiply_by_seven")}
+                    </button>
+                    <button id="multiply-by-eight" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("8")}>
+                        {t("gradeTwo.multiply_by_eight")}
+                    </button>
+                    <button id="multiply-by-nine" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("9")}>
+                        {t("gradeTwo.multiply_by_nine")}
+                    </button>
+                    <button id="multiply-by-ten" className="quiz-btn" onClick={() => handleMultiplyByQuizClick("10")}>
+                        {t("gradeTwo.multiply_by_ten")}
+                    </button>
                 </div>
             </section>
         </main>

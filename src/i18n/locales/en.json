@@ -73,6 +73,11 @@
             "multiply_by_three": "Multiply By 3",
             "multiply_by_four": "Multiply By 4",
             "multiply_by_five": "Multiply By 5",
+            "multiply_by_six": "Multiply By 6",
+            "multiply_by_seven": "Multiply By 7",
+            "multiply_by_eight": "Multiply By 8",
+            "multiply_by_nine": "Multiply By 9",
+            "multiply_by_10": "Multiply By 10",
             "submit": "Submit"
         }
     }
